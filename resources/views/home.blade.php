@@ -3,8 +3,8 @@
 @section('title', 'Home Page')
 
 @section('content')
-{{-- @include('components.hero', ['landingPageData' => $landingPageData]) --}}
-@include('components.header.header-video-order')
+{{-- Include the header component with data --}}
+@include('components.header.header-video-order', ['headerData' => $headerData])
 
 <div class="wrapper">
     @component('components.product') @endcomponent
