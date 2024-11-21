@@ -4,12 +4,12 @@
   <div class="content-center">
     <div class="container">
       <div class="motto">
-        <h1 class="title">Landing page</h1>
-        <h3 class="description">Start designing your landing page here.</h3>
+        <h1 class="title">{{ $landingPageData->title }}</h1>
+        <h3 class="description">{{ $landingPageData->description }}</h3>
         <br />
-        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="btn btn-neutral btn-round"><i
-            class="fa fa-play"></i>Watch video</a>
-        <button type="button" class="btn btn-outline-neutral btn-round">Download</button>
+        <a href="{{ $landingPageData->video_url }}" class="btn btn-neutral btn-round"><i
+            class="{{ $landingPageData->icon_class }}"></i>{{ $landingPageData->watch_video_text }}</a>
+        <button type="button" class="btn btn-outline-neutral btn-round">{{ $landingPageData->download_text }}</button>
       </div>
     </div>
   </div>
