@@ -1,0 +1,83 @@
+<div class="project-4 section section-dark">
+<div class="container">
+    <div class="row">
+      <div class="col-md-8 ml-auto mr-auto text-center">
+        <h2 class="title">Some of Our Awesome Projects - 4</h2>
+        <h5 class="description">This is the paragraph where you can write more details about your projects. Keep you user engaged by providing meaningful information.</h5>
+      </div>
+    </div>
+    <div class="space-top"></div>
+    <div class="row">
+      <div class="col-md-5 ml-auto">
+        <div class="card" data-background="image" style="background-image: url('{{asset('img/sections/sebastien-gabrieles.jpg') }} ')">
+          <div class="card-icon">
+            <i class="nc-icon nc-mobile"></i>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-5 mr-auto">
+        <div class="card card-plain">
+          <div class="card-body">
+            <h6 class="card-category">Technology</h6>
+            <a href="javascript:;">
+              <h3 class="card-title">The need of a great product</h3>
+            </a>
+            <p class="card-description">Artificial intelligence-focused investment funds are a dime a dozen these days. Everyone knows there’s money to be made from AI, but to capture value, good VCs know they need to back products and not
+              technologies.</p>
+            <div class="card-footer">
+              <a href="javascript:;" class="btn btn-link btn-neutral">
+                <i class="fa fa-book" aria-hidden="true"></i> Read More
+              </a>
+              <a href="javascript:;" class="btn btn-just-icon btn-link btn-neutral">
+                <i class="fa fa-apple" aria-hidden="true"></i>
+              </a>
+              <a href="javascript:;" class="btn btn-just-icon btn-link btn-neutral">
+                <i class="fa fa-android" aria-hidden="true"></i>
+              </a>
+              <a href="javascript:;" class="btn btn-just-icon btn-link btn-neutral">
+                <i class="fa fa-windows" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br />
+    <hr /><br />
+    <div class="row">
+      <div class="col-md-5 ml-auto">
+        <div class="card card-plain">
+          <div class="card-body">
+            <h6 class="card-category">Design</h6>
+            <a href="javascript:;">
+              <h3 class="card-title">The aesthetic quality of a product</h3>
+            </a>
+            <p class="card-description">Eventually, the data collected from the grant program could allow the two to play a bit of machine learning moneyball — valuing machine learning engineers without traditional metrics (like having a PhD from
+              Stanford)...</p>
+            <div class="card-footer">
+              <a href="javascript:;" class="btn btn-link btn-neutral">
+                <i class="fa fa-book" aria-hidden="true"></i> Read More
+              </a>
+              <a href="javascript:;" class="btn btn-just-icon btn-link btn-neutral">
+                <i class="fa fa-apple" aria-hidden="true"></i>
+              </a>
+              <a href="javascript:;" class="btn btn-just-icon btn-link btn-neutral">
+                <i class="fa fa-android" aria-hidden="true"></i>
+              </a>
+              <a href="javascript:;" class="btn btn-just-icon btn-link btn-neutral">
+                <i class="fa fa-windows" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-5 mr-auto">
+        <div class="card" data-background="image" style="background-image: url('{{asset('img/sections/john-towner.jpg') }} ')">    
+          <div class="card-icon">
+            <i class="nc-icon nc-controller-modern"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
