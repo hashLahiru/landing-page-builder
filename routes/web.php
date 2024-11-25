@@ -15,7 +15,7 @@ Route::get('/', function () {
         ->with('values')
         ->get();
 
-     // Create an associative array to store field data for the 'header'
+    // Create an associative array to store field data for the 'header'
     $headerData = [];
     foreach ($headerFields as $field) {
         $headerData[$field->field_name] = $field->values->pluck('value')->first();
@@ -29,7 +29,7 @@ Route::get('/', function () {
         ->with('values')
         ->get();
 
-   // Create an associative array to store field data for the 'product'
+    // Create an associative array to store field data for the 'product'
     $productData = [];
     foreach ($productFields as $field) {
         $productData[$field->field_name] = $field->values->pluck('value')->first();
@@ -79,6 +79,14 @@ Route::get('/product', function () {
         'headerData' => (object) $headerData,
         'productData' => (object) $productData,
     ]);
+});
+
+Route::get('/admin', function () {
+    return view('admin.dashboard');
+});
+
+Route::get('/admin-test', function () {
+    return view('admin.dashboard');
 });
 
 Route::get('/landing-page/component/{id}', [LandingPageController::class, 'getComponentData']);
