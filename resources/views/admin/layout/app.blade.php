@@ -71,139 +71,90 @@
 
     <!-- Toastr -->
     <script src="{{ asset('admin/js/plugins/toastr/toastr.min.js') }}"></script>
-
     <script>
-        $(document).ready(function () {
-        setTimeout(function () {
-          toastr.options = {
-            closeButton: true,
-            progressBar: true,
-            showMethod: "slideDown",
-            timeOut: 4000,
-          };
-          toastr.success("Responsive Admin Theme", "Welcome to INSPINIA");
-        }, 1300);
+        $(document).ready(function() {
+        var updatedFields = {};
 
-        var data1 = [
-          [0, 4],
-          [1, 8],
-          [2, 5],
-          [3, 10],
-          [4, 4],
-          [5, 16],
-          [6, 5],
-          [7, 11],
-          [8, 6],
-          [9, 11],
-          [10, 30],
-          [11, 10],
-          [12, 13],
-          [13, 4],
-          [14, 3],
-          [15, 3],
-          [16, 6],
-        ];
-        var data2 = [
-          [0, 1],
-          [1, 0],
-          [2, 2],
-          [3, 0],
-          [4, 1],
-          [5, 3],
-          [6, 1],
-          [7, 5],
-          [8, 2],
-          [9, 3],
-          [10, 2],
-          [11, 1],
-          [12, 0],
-          [13, 2],
-          [14, 8],
-          [15, 0],
-          [16, 0],
-        ];
-        $("#flot-dashboard-chart").length &&
-          $.plot($("#flot-dashboard-chart"), [data1, data2], {
-            series: {
-              lines: {
-                show: false,
-                fill: true,
-              },
-              splines: {
-                show: true,
-                tension: 0.4,
-                lineWidth: 1,
-                fill: 0.4,
-              },
-              points: {
-                radius: 0,
-                show: true,
-              },
-              shadowSize: 2,
-            },
-            grid: {
-              hoverable: true,
-              clickable: true,
-              tickColor: "#d5d5d5",
-              borderWidth: 1,
-              color: "#d5d5d5",
-            },
-            colors: ["#1ab394", "#1C84C6"],
-            xaxis: {},
-            yaxis: {
-              ticks: 4,
-            },
-            tooltip: false,
-          });
+        $('#componentDropdown').on('change', function() {
+            var componentId = $(this).val();
 
-        var doughnutData = {
-          labels: ["App", "Software", "Laptop"],
-          datasets: [
-            {
-              data: [300, 50, 100],
-              backgroundColor: ["#a3e1d4", "#dedede", "#9CC3DA"],
-            },
-          ],
-        };
+            if (componentId) {
+                console.log('Selected component ID:', componentId);
 
-        var doughnutOptions = {
-          responsive: false,
-          legend: {
-            display: false,
-          },
-        };
+                $.ajax({
+                    url: '/get-component-fields/' + componentId,
+                    type: 'GET',
+                    dataType: 'json',
+                    success: function(data) {
+                        console.log('Fields Data:', data);
 
-        var ctx4 = document.getElementById("doughnutChart").getContext("2d");
-        new Chart(ctx4, {
-          type: "doughnut",
-          data: doughnutData,
-          options: doughnutOptions,
+                        var container = $('#componentFieldsContainer');
+                        container.empty();
+
+                        if (data.fields && data.fields.length > 0) {
+                            $.each(data.fields, function(index, field) {
+                                var label = $('<label>', {
+                                    class: 'col-lg-2 col-form-label',
+                                    text: field.field_name,
+                                    });
+
+                                var input = $('<input>', {
+                                    type: 'text',
+                                    class: 'col-lg-10 form-control', // Bootstrap form-control class for styling
+                                    name: 'field[' + field.id + ']',
+                                    value: field.value,
+                                });
+
+                                updatedFields[field.id] = field.value;
+
+                                var fieldDiv = $('<div>', { class: 'form-group row' })
+                                    .append(label)
+                                    .append(input);
+
+                                container.append(fieldDiv);
+
+                                input.on('change', function() {
+                                    updatedFields[field.id] = $(this).val();
+                                });
+                            });
+                        } else {
+                            container.append('<p>No fields available for this component.</p>');
+                        }
+                    },
+                    error: function(xhr, status, error) {
+                        console.error('Error fetching fields:', error);
+                    }
+                });
+            } else {
+                $('#componentFieldsContainer').empty();
+            }
         });
 
-        var doughnutData = {
-          labels: ["App", "Software", "Laptop"],
-          datasets: [
-            {
-              data: [70, 27, 85],
-              backgroundColor: ["#a3e1d4", "#dedede", "#9CC3DA"],
-            },
-          ],
-        };
+        $('#saveButton').on('click', function() {
+            var componentId = $('#componentDropdown').val();
 
-        var doughnutOptions = {
-          responsive: false,
-          legend: {
-            display: false,
-          },
-        };
-
-        var ctx4 = document.getElementById("doughnutChart2").getContext("2d");
-        new Chart(ctx4, {
-          type: "doughnut",
-          data: doughnutData,
-          options: doughnutOptions,
+            if (componentId) {
+                $.ajax({
+                    url: '/save-component-fields',
+                    type: 'POST',
+                    data: {
+                        _token: '{{ csrf_token() }}',
+                        component_id: componentId,
+                        updated_fields: updatedFields
+                    },
+                    success: function(response) {
+                        alert('Changes saved successfully!');
+                    },
+                    error: function(xhr, status, error) {
+                        console.error('Error saving fields:', error);
+                        alert('An error occurred while saving changes.');
+                    }
+                });
+            } else {
+                alert('Please select a component.');
+            }
         });
-      });
+    });
     </script>
 </body>
 
