@@ -11,6 +11,8 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         // Call the ComponentSeeder to insert sample data
-        $this->call(ComponentSeeder::class);
+        // $this->call(ComponentSeeder::class);
+        $this->call(AdminDashMainSeeder::class);
+        $this->call(AdminDashSubSeeder::class);
     }
 }
