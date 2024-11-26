@@ -13,35 +13,33 @@ return new class extends Migration
     {
         Schema::create('new_product', function (Blueprint $table) {
             $table->id();
-            $table->string('product_title');
-            $table->text('product_description')->nullable();
-            $table->string('detail_button_text');
-            $table->string('detail_button_url');
-
-            $table->string('icon_1');
-            $table->string('text_1');
-            $table->string('description_1');
-            $table->string('button_1_text');
-            $table->string('button_1_url');
+            $table->string('f1_title');
+            $table->text('f1_description')->nullable();
+  
+            $table->string('f1_icon1');
+            $table->string('f1_text1');
+            $table->string('f1_description1');
+            $table->string('f1_button1_text');
+            $table->string('f1_button1_url');
 
 
-            $table->string('icon_2');
-            $table->string('text_2');
-            $table->string('description_2');
-            $table->string('button_2_text');
-            $table->string('button_2_url');
+            $table->string('f1_icon2');
+            $table->string('f1_text2');
+            $table->string('f1_description2');
+            $table->string('f1_button2_text');
+            $table->string('f1_button2_url');
 
-            $table->string('icon_3');
-            $table->string('text_3');
-            $table->string('description_3');
-            $table->string('button_3_text');
-            $table->string('button_3_url');
+            $table->string('f1_icon3');
+            $table->string('f1_text3');
+            $table->string('f1_description3');
+            $table->string('f1_button3_text');
+            $table->string('f1_button3_url');
 
-            $table->string('icon_4');
-            $table->string('text_4');
-            $table->string('description_4');
-            $table->string('button_4_text');
-            $table->string('button_4_url');
+            $table->string('f1_icon4');
+            $table->string('f1_text4');
+            $table->string('f1_description4');
+            $table->string('f1_button4_text');
+            $table->string('f1_button4_url');
 
 
             $table->timestamps();
