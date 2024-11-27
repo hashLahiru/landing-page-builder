@@ -20,7 +20,12 @@
                                 <a class="dropdown-item" href="mailbox.html">Mailbox</a>
                             </li>
                             <li class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="login.html">Logout</a></li>
+                            <li>
+                                <form action="{{ route('logout') }}" method="POST" style="display: inline;">
+                                    @csrf
+                                    <button type="submit" class="dropdown-item">Logout</button>
+                                </form>
+                            </li>
                         </ul>
                     </div>
                     <div class="logo-element">IN+</div>
@@ -168,11 +173,11 @@
                             </li>
                         </ul>
                     </li>
-
                     <li>
-                        <a href="login.html">
-                            <i class="fa fa-sign-out"></i> Log out
-                        </a>
+                        <form action="{{ route('logout') }}" method="POST" style="display: inline;">
+                            @csrf
+                            <button type="submit" class="dropdown-item">Logout</button>
+                        </form>
                     </li>
                     <li>
                         <a class="right-sidebar-toggle">
