@@ -4,51 +4,51 @@
         <div class="col-md-6">
           <div class="row">
             <div class="container">
-              <h2 class="title">Your life will be much easier</h2>
+              <h2 class="title">{{ $feature3Data->f3_title ?? null }}</h2>
             </div>
           </div>
           <div class="row">
             <div class="col-md-6">
               <div class="info info-horizontal">
                 <div class="icon icon-success">
-                  <i class="nc-icon nc-layout-11"></i>
+                  <i class="{{ $feature3Data->f3_icon1 ?? null }}"></i>
                 </div>
                 <div class="description">
-                  <h4 class="info-title">Components</h4>
-                  <p>The kit comes with a huge number of components designed to look perfect together.</p>
-                  <a href="javascript:;" class="btn btn-link">See more</a>
+                  <h4 class="info-title">{{ $feature3Data->f3_text1 ?? null }}</h4>
+                  <p>{{ $feature3Data->f3_para1 ?? null }}</p>
+                  <a href="{{ $feature3Data->f3_button1_url ?? null }}" class="btn btn-link">{{ $feature3Data->f3_button1_text ?? null }}</a>
                 </div>
               </div>
               <div class="info info-horizontal">
                 <div class="icon icon-warning">
-                  <i class="nc-icon nc-palette"></i>
+                  <i class="{{ $feature3Data->f3_icon2 ?? null }}"></i>
                 </div>
                 <div class="description">
-                  <h4 class="info-title">Beautiful Gallery</h4>
-                  <p>Spend your time generating new ideas. You don't have to think of implementing anymore.</p>
-                  <a href="javascript:;" class="btn btn-link">See more</a>
+                  <h4 class="info-title">{{ $feature3Data->f3_text2 ?? null }}</h4>
+                  <p>{{ $feature3Data->f3_para2 ?? null }}</p>
+                  <a href="{{ $feature3Data->f3_button2_url ?? null }}" class="btn btn-link">{{ $feature3Data->f3_button2_text ?? null }}</a>
                 </div>
               </div>
             </div>
             <div class="col-md-6">
               <div class="info info-horizontal">
                 <div class="icon icon-danger">
-                  <i class="nc-icon nc-touch-id"></i>
+                  <i class="{{ $feature3Data->f3_icon3 ?? null }}"></i>
                 </div>
                 <div class="description">
-                  <h4 class="info-title">Secured</h4>
-                  <p>Larger, yet dramatically thinner. More powerful, but remarkably power is efficient.</p>
-                  <a href="javascript:;" class="btn btn-link">See more</a>
+                  <h4 class="info-title">{{ $feature3Data->f3_text3 ?? null }}</h4>
+                  <p>{{ $feature3Data->f3_para3 ?? null }}</p>
+                  <a href="{{ $feature3Data->f3_button3_url ?? null }}" class="btn btn-link">{{ $feature3Data->f3_button3_text ?? null }}</a>
                 </div>
               </div>
               <div class="info info-horizontal">
                 <div class="icon icon-primary">
-                  <i class="nc-icon nc-delivery-fast"></i>
+                  <i class="{{ $feature3Data->f3_icon4 ?? null }}"></i>
                 </div>
                 <div class="description">
-                  <h4 class="info-title">Fast Prototyping</h4>
-                  <p>Medium has a new head of product, while the startup behind the defunct texting app...</p>
-                  <a href="javascript:;" class="btn btn-link">See more</a>
+                  <h4 class="info-title">{{ $feature3Data->f3_text4 ?? null }}</h4>
+                  <p>{{ $feature3Data->f3_para4 ?? null }}</p>
+                  <a href="{{ $feature3Data->f3_button4_url ?? null }}" class="btn btn-link">{{ $feature3Data->f3_button4_text ?? null }}</a>
                 </div>
               </div>
             </div>
@@ -56,7 +56,7 @@
         </div>
         <div class="col-md-5 ml-auto">
           <div class="iphone-container">
-            <img src="{{ asset('img/sections/iphone.png') }}" alt="iPhone Image">
+            <img src="{{ asset($feature3Data->f3_img_url ?? 'img/default.jpg') }}" alt="iPhone Image">
            
           </div>
         </div>
