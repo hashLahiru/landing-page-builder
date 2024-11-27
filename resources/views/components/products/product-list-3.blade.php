@@ -3,23 +3,23 @@
       <div class="row">
         <div class="col-md-8 ml-auto mr-auto text-center">
           <div class="space-top"></div>
-          <h6 class="category">Our work</h6>
-          <h2 class="title">Some of Our Awesome Projects - 3</h2>
+          <h6 class="category">{{ $ProductList3Data->p3_text ?? null }}</h6>
+          <h2 class="title">{{ $ProductList3Data->p3_title ?? null }}</h2>
         </div>
       </div>
       <div class="row">
         <div class="col-md-4">
           <div class="card card-profile card-plain">
             <div class="card-img-top">
-              <a href="http://www.creative-tim.com/product/paper-kit">
-                <img class="img" src="{{asset('img/sections/angelo-pantazis.jpg') }}" />
+              <a href="{{ $ProductList3Data->p3_img1_url ?? null }}">
+                <img class="img" src="{{asset($ProductList2Data->p3_img1 ?? 'img/default.jpg') }}" />
               </a>
             </div>
             <div class="card-body">
-              <h6 class="card-category">Productivity tools</h6>
-              <h4 class="card-title">Beautiful Desktop for Designers</h4>
+              <h6 class="card-category">{{ $ProductList3Data->p3_textA1 ?? null }}</h6>
+              <h4 class="card-title">{{ $ProductList3Data->p3_textB1 ?? null }}</h4>
               <p class="card-description">
-                As this technology matures it will be cool to see what hackers are able to do with it.
+                {{ $ProductList3Data->p3_para1 ?? null }}
               </p>
             </div>
           </div>
@@ -27,15 +27,15 @@
         <div class="col-md-4 ">
           <div class="card card-profile card-plain">
             <div class="card-img-top">
-              <a href="http://www.creative-tim.com/product/paper-kit">
-                <img class="img" src="{{asset('img/sections/patrick-tomasso.jpg') }}" />
+              <a href=" {{ $ProductList3Data->p3_img2_url ?? null }}">
+                <img class="img" src="{{asset($ProductList2Data->p3_img2 ?? 'img/default.jpg') }}" />
               </a>
             </div>
             <div class="card-body">
-              <h6 class="card-category">Web Design</h6>
-              <h4 class="card-title">Famous Website Redesign Implementation</h4>
+              <h6 class="card-category"> {{ $ProductList3Data->p3_textA2 ?? null }}</h6>
+              <h4 class="card-title"> {{ $ProductList3Data->p3_textB2 ?? null }}</h4>
               <p class="card-description">
-                Streaming services once again top the list of this year’s Emmy nominations
+                {{ $ProductList3Data->p3_para2 ?? null }}  
               </p>
             </div>
           </div>
@@ -43,15 +43,15 @@
         <div class="col-md-4">
           <div class="card card-profile card-plain">
             <div class="card-img-top">
-              <a href="http://www.creative-tim.com/product/paper-kit">
-                <img class="img" src="{{asset('img/sections/luke-chesser.jpg') }}" />
+              <a href=" {{ $ProductList3Data->p3_img3_url ?? null }}  ">
+                <img class="img" src="{{asset($ProductList2Data->p3_img3 ?? 'img/default.jpg') }}" />
               </a>
             </div>
             <div class="card-body">
-              <h6 class="card-category">Marketing tools</h6>
-              <h4 class="card-title">The Best Productivity Applications</h4>
+              <h6 class="card-category"> {{ $ProductList3Data->p3_textA3 ?? null }}  </h6>
+              <h4 class="card-title"> {{ $ProductList3Data->p3_textB3 ?? null }}  </h4>
               <p class="card-description">
-                Dietary supplements don’t need approval from the Food and Drug Administration.
+                {{ $ProductList3Data->p3_para3 ?? null }}  
               </p>
             </div>
           </div>
@@ -59,15 +59,15 @@
         <div class="col-md-4">
           <div class="card card-profile card-plain">
             <div class="card-img-top">
-              <a href="http://www.creative-tim.com/product/paper-kit">
+              <a href="{{ $ProductList3Data->p3_img5_url ?? null }}">
                 <img class="img" src="{{asset('img/sections/rawpixel-coms.jpg') }}" />
               </a>
             </div>
             <div class="card-body">
-              <h6 class="card-category">Website</h6>
-              <h4 class="card-title">Behance Redesign</h4>
+              <h6 class="card-category">{{ $ProductList3Data->p3_textA5 ?? null }}</h6>
+              <h4 class="card-title">{{ $ProductList3Data->p3_textB5 ?? null }}</h4>
               <p class="card-description">
-                The HDR rollout is being enabled via support from two major studio partners.
+                {{ $ProductList3Data->p3_para5 ?? null }}
               </p>
             </div>
           </div>
@@ -75,15 +75,15 @@
         <div class="col-md-4">
           <div class="card card-profile card-plain">
             <div class="card-img-top">
-              <a href="http://www.creative-tim.com/product/paper-kit">
+              <a href=" {{ $ProductList3Data->p3_para5 ?? null }}">
                 <img class="img" src="{{asset('img/sections/patrick-tomasso.jpg') }}" />
               </a>
             </div>
             <div class="card-body">
-              <h6 class="card-category">Android App</h6>
-              <h4 class="card-title">Analytics for Android</h4>
+              <h6 class="card-category">{{ $ProductList3Data->p3_para5 ?? null }}</h6>
+              <h4 class="card-title"> {{ $ProductList3Data->p3_para5 ?? null }}</h4>
               <p class="card-description">
-                Google did not offer an estimate as to when HDR support reaches its other global markets.
+                {{ $ProductList3Data->p3_para5 ?? null }}
               </p>
             </div>
           </div>
