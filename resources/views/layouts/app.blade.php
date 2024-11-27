@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="csrf-token" content="{{ csrf_token() }}">
 
-  <title>{{ config('app.name', 'Laravel') }}</title>
+  <title>{{ config('app.name', 'Site Name') }}</title>
 
   <!-- Fonts and icons -->
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
@@ -34,6 +34,7 @@
     <!-- Include Navbar -->
     @include('components.navbar')
 
+    {{--
     <!-- Page Heading -->
     @isset($header)
     <header class="bg-white shadow">
@@ -41,7 +42,7 @@
         {{ $header }}
       </div>
     </header>
-    @endisset
+    @endisset --}}
 
     <!-- Page Content -->
     <main>
