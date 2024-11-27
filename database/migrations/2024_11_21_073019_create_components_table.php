@@ -10,8 +10,8 @@ class CreateComponentsTable extends Migration
     {
         Schema::create('components', function (Blueprint $table) {
             $table->id();
-            $table->string('name'); // Component name
-            $table->text('description')->nullable(); // Component description
+            $table->string('name');
+            $table->text('description')->nullable();
             $table->timestamps();
         });
     }
