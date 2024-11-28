@@ -17,7 +17,6 @@
 
     <!-- Laravel's App styles -->
     <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
 
     <style>
         .async-hide {
@@ -30,29 +29,15 @@
 </head>
 
 <body class="font-sans antialiased">
-    <div class="min-h-screen bg-gray-100">
-        <!-- Include Navbar -->
-        @include('components.navbar')
+    @include('components.navbar')
 
+    <!-- Page Content -->
+    <main>
+        @yield('content')
+    </main>
 
-        <!-- Page Heading -->
-        @isset($header)
-            <header class="bg-white shadow">
-                <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-                    {{ $header }}
-                </div>
-            </header>
-        @endisset
-
-        <!-- Page Content -->
-        <main>
-            @yield('content')
-        </main>
-
-        <!-- Include Footer -->
-        @include('components.footer')
-
-    </div>
+    <!-- Include Footer -->
+    @include('components.footer')
 
     <!-- JS Files -->
     <script src="{{ asset('/js/core/jquery.min.js') }}" type="text/javascript"></script>
