@@ -140,19 +140,3 @@ class ComponentSeeder extends Seeder
         return $sampleValues[$field] ?? [];
     }
 }
-
-
-        // $component = Component::create([
-        //     'name' => 'header',
-        //     'description' => 'This is the header section of the landing page',
-        // ]);
-
-        // $fields = [
-        //     'title',
-        //     'description',
-        //     'background_image_url',
-        //     'video_url',
-        //     'button_text',
-        //     'button_url',
-        //     'button_icon',
-        // ];

@@ -10,211 +10,53 @@ use App\Models\ComponentField;
 use App\Http\Controllers\AuthenticatedSessionController;
 use App\Http\Controllers\ContactController;
 
+// Landing Page Route
 Route::get('/', function () {
-    $headerComponent = Component::where('name', 'header')->first();
-    $headerFields = ComponentField::where('component_id', $headerComponent->id)
-        ->with('values')
-        ->get();
-    $headerData = [];
-    foreach ($headerFields as $field) {
-        $headerData[$field->field_name] = $field->values->pluck('value')->first();
+    $components = [
+        'header',
+        'product',
+        'feature2',
+        'feature3',
+        'feature4',
+        'feature5',
+        'feedback1',
+        'feedback2',
+        'feedback3',
+        'ProductList1',
+        'ProductList2'
+    ];
+
+    $data = [];
+    foreach ($components as $componentName) {
+        $component = Component::where('name', $componentName)->first();
+        if ($component) {
+            $fields = ComponentField::where('component_id', $component->id)
+                ->with('values')
+                ->get();
+            $componentData = [];
+            foreach ($fields as $field) {
+                $componentData[$field->field_name] = $field->values->pluck('value')->first();
+            }
+            $data[$componentName . 'Data'] = (object) $componentData;
+        }
     }
 
-    $productComponent = Component::where('name', 'product')->first();
-    $productFields = ComponentField::where('component_id', $productComponent->id)
-        ->with('values')
-        ->get();
-    $productData = [];
-    foreach ($productFields as $field) {
-        $productData[$field->field_name] = $field->values->pluck('value')->first();
-    }
-
-    // Nithya Jayasooriya - 25/11/2024
-    $feature2Component = Component::where('name', 'feature2')->first();
-    $feature2Fields = ComponentField::where('component_id', $feature2Component->id)
-        ->with('values')
-        ->get();
-    $feature2Data = [];
-    foreach ($feature2Fields as $field) {
-        $feature2Data[$field->field_name] = $field->values->pluck('value')->first();
-    }
-
-    // Nithya Jayasooriya  -  25/11/2024  --------------------
-    $feature3Component = Component::where('name', 'feature3')->first();
-    $feature3Fields = ComponentField::where('component_id', $feature3Component->id)
-        ->with('values')
-        ->get();
-    $feature3Data = [];
-    foreach ($feature3Fields as $field) {
-        $feature3Data[$field->field_name] = $field->values->pluck('value')->first();
-    }
-
-    // Nithya Jayasooriya  -  26/11/2024  --------------------
-    $feature4Component = Component::where('name', 'feature4')->first();
-    $feature4Fields = ComponentField::where('component_id', $feature4Component->id)
-        ->with('values')
-        ->get();
-
-    $feature4Data = [];
-    foreach ($feature4Fields as $field) {
-        $feature4Data[$field->field_name] = $field->values->pluck('value')->first();
-    }
-
-    // Nithya Jayasooriya  -  26/11/2024  --------------------
-    $feature5Component = Component::where('name', 'feature5')->first();
-    $feature5Fields = ComponentField::where('component_id', $feature5Component->id)
-        ->with('values')
-        ->get();
-    $feature5Data = [];
-    foreach ($feature5Fields as $field) {
-        $feature5Data[$field->field_name] = $field->values->pluck('value')->first();
-    }
-
-    // Nithya Jayasooriya  -  26/11/2024  --------------------
-    $feature4Component = Component::where('name', 'feature4')->first();
-    $feature4Fields = ComponentField::where('component_id', $feature4Component->id)
-        ->with('values')
-        ->get();
-
-    $feature4Data = [];
-    foreach ($feature4Fields as $field) {
-        $feature4Data[$field->field_name] = $field->values->pluck('value')->first();
-    }
-
-    // Nithya Jayasooriya  -  26/11/2024  --------------------
-    $feedback1Component = Component::where('name', 'feedback1')->first();
-    $feedback1Fields = ComponentField::where('component_id', $feedback1Component->id)
-        ->with('values')
-        ->get();
-    $feedback1Data = [];
-    foreach ($feedback1Fields as $field) {
-        $feedback1Data[$field->field_name] = $field->values->pluck('value')->first();
-    }
-
-    // Nithya Jayasooriya  -  26/11/2024  --------------------
-    $feedback2Component = Component::where('name', 'feedback2')->first();
-    $feedback2Fields = ComponentField::where('component_id', $feedback2Component->id)
-        ->with('values')
-        ->get();
-
-    $feedback2Data = [];
-    foreach ($feedback2Fields as $field) {
-        $feedback2Data[$field->field_name] = $field->values->pluck('value')->first();
-    }
-
-    // Nithya Jayasooriya  -  26/11/2024  --------------------
-
-    $feedback3Component = Component::where('name', 'feedback3')->first();
-
-
-    $feedback3Fields = ComponentField::where('component_id', $feedback3Component->id)
-        ->with('values')
-        ->get();
-
-    $feedback3Data = [];
-    foreach ($feedback3Fields as $field) {
-        $feedback3Data[$field->field_name] = $field->values->pluck('value')->first();
-    }
-
-
-
-
-
-    // Nithya Jayasooriya  -  27/11/2024  --------------------
-
-    $ProductList1Component = Component::where('name', 'ProductList1')->first();
-
-
-    $ProductList1Fields = ComponentField::where('component_id', $ProductList1Component->id)
-        ->with('values')
-        ->get();
-
-    $ProductList1Data = [];
-    foreach ($ProductList1Fields as $field) {
-        $ProductList1Data[$field->field_name] = $field->values->pluck('value')->first();
-    }
-
-
-
-
-    // Nithya Jayasooriya  -  27/11/2024  --------------------
-
-    $ProductList2Component = Component::where('name', 'ProductList2')->first();
-
-
-    $ProductList2Fields = ComponentField::where('component_id', $ProductList2Component->id)
-        ->with('values')
-        ->get();
-
-    $ProductList2Data = [];
-    foreach ($ProductList2Fields as $field) {
-        $ProductList2Data[$field->field_name] = $field->values->pluck('value')->first();
-    }
-
-
-    // Nithya Jayasooriya  -  27/11/2024  --------------------
-
-    //    $ProductList3Component = Component::where('name', 'ProductList3')->first();
-
-
-    //    $ProductList3Fields = ComponentField::where('component_id', $ProductList3Component->id)
-    //        ->with('values')
-    //        ->get();
-
-    //    $ProductList3Data = [];
-    //    foreach ($ProductList3Fields as $field) {
-    //        $ProductList3Data[$field->field_name] = $field->values->pluck('value')->first();
-    //    }
-
-
-
-
-    //  // Nithya Jayasooriya  -  27/11/2024  --------------------
-
-    //  $ProductList4Component = Component::where('name', 'ProductList4')->first();
-
-
-    //  $ProductList4Fields = ComponentField::where('component_id', $ProductList4Component->id)
-    //      ->with('values')
-    //      ->get();
-
-    //  $ProductList4Data = [];
-    //  foreach ($ProductList4Fields as $field) {
-    //      $ProductList4Data[$field->field_name] = $field->values->pluck('value')->first();
-    //  }
-    //  }
-
-
-
-
-    // Pass both sets of data to the view
-    return view('home', [
-        'headerData' => (object) $headerData,
-        'productData' => (object) $productData,
-        'feature2Data' => (object) $feature2Data,
-        'feature3Data' => (object) $feature3Data,
-        'feature4Data' => (object) $feature4Data,
-        'feature5Data' => (object) $feature5Data,
-        'feedback1Data' => (object) $feedback1Data,
-        'feedback2Data' => (object) $feedback2Data,
-        'feedback3Data' => (object) $feedback3Data,
-        'ProductList1Data' => (object) $ProductList1Data,
-        'ProductList2Data' => (object) $ProductList2Data,
-        // 'ProductList3Data' => (object) $ProductList3Data,
-        // 'ProductList4Data' => (object) $ProductList4Data,
-    ]);
+    return view('home', $data);
 });
 
+// Admin Dashboard Route
 Route::get('/admin-test', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
+// Profile Management Routes
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+// Admin Routes
 Route::middleware('auth')->group(function () {
     Route::get('/admin', function () {
         return view('admin.dashboard');
@@ -225,7 +67,6 @@ Route::middleware('auth')->group(function () {
     });
 
     Route::get('/messages', [ContactController::class, 'index'])->name('admin.messages');
-
     Route::get('/messages/{id}', [ContactController::class, 'show'])->name('admin.messages.show');
 
     Route::get('/page-editor', function () {
@@ -238,6 +79,7 @@ Route::middleware('auth')->group(function () {
     Route::post('/save-component-fields', [AdminController::class, 'saveComponentFields']);
 });
 
+// Retrieve Component Fields for AJAX
 Route::get('/get-component-fields/{componentId}', function ($componentId) {
     $component = Component::with('fields.values')->find($componentId);
 
@@ -256,11 +98,18 @@ Route::get('/get-component-fields/{componentId}', function ($componentId) {
     return response()->json(['error' => 'Component not found'], 404);
 });
 
+// Image Upload Routes
 Route::get('/image-uploader', [ImageController::class, 'index'])->name('image.uploader');
-Route::post('admin/image-upload', [ImageController::class, 'upload'])->name('image.upload');
+Route::post('/admin/image-upload', [ImageController::class, 'upload'])->name('image.upload');
+
+// Landing Page Component Data
 Route::get('/landing-page/component/{id}', [LandingPageController::class, 'getComponentData']);
 
-Route::post('/logout', [AuthenticatedSessionController::class, 'destroy'])->name('logout');
+// Contact Form Routes
 Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
 
+// Logout Route
+Route::post('/logout', [AuthenticatedSessionController::class, 'destroy'])->name('logout');
+
+// Authentication Routes
 require __DIR__ . '/auth.php';
