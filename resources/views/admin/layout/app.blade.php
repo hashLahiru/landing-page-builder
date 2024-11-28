@@ -27,13 +27,9 @@
 
 <body>
     @include('admin.layout.header')
-
-    {{-- Header Part --}}
     <main>
         @yield('content')
     </main>
-    {{-- Header End --}}
-
     @include('admin.layout.footer')
 
     <!-- jQuery -->
@@ -93,11 +89,10 @@
                 searching: true,
                 ordering: true,
                 columnDefs: [{
-                        orderable: false,
-                        targets: [0]
-                    } // Disable sorting on "Select" column
-                ],
-                dom: '<"top"f>rt<"bottom"p><"clear">' // Example: Modify the DataTable layout
+                    orderable: false,
+                    targets: [0]
+                }],
+                dom: '<"top"f>rt<"bottom"p><"clear">'
             });
 
             $('#componentDropdown').on('change', function() {
@@ -125,7 +120,7 @@
 
                                     var input = $('<input>', {
                                         type: 'text',
-                                        class: 'col-lg-10 form-control', // Bootstrap form-control class for styling
+                                        class: 'col-lg-10 form-control',
                                         name: 'field[' + field.id + ']',
                                         value: field.value,
                                     });
@@ -173,11 +168,7 @@
                         success: function(response) {
                             toastr.clear();
                             toastr.success('Changes saved successfully!');
-
-                            // Clear the dynamically loaded fields and labels
                             $('#componentFieldsContainer').empty();
-
-                            // Optionally reset the `updatedFields` object
                             updatedFields = {};
                         },
                         error: function(xhr, status, error) {

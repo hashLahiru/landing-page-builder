@@ -3,7 +3,6 @@
 @section('title', 'Messages')
 
 @section('content')
-
     <div class="row">
         <div class="col-lg-12 animated fadeInRight">
             <div class="mail-box-header">

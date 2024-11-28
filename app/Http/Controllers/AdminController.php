@@ -20,17 +20,14 @@ class AdminController extends Controller
 
         if ($component) {
             foreach ($updatedFields as $fieldId => $value) {
-                // Find the field
                 $field = ComponentField::find($fieldId);
 
                 if ($field) {
-                    // Find or create the value entry for this field
                     $fieldValue = ComponentFieldValue::firstOrCreate(
-                        ['component_field_id' => $fieldId], // Match criteria
-                        ['value' => ''] // Default value
+                        ['component_field_id' => $fieldId],
+                        ['value' => '']
                     );
 
-                    // Update the value
                     $fieldValue->value = $value;
                     $fieldValue->save();
                 }

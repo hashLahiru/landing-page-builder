@@ -259,7 +259,6 @@
                         <a href="#">
                             <span class="label label-primary float-right">NEW</span>
                             <h4>The generated</h4>
-                            <!--<div class="small float-right m-t-xs">9 hours ago</div>-->
                             There are many variations of passages of Lorem Ipsum
                             available.
                             <div class="small">Completion with: 22%</div>
@@ -282,7 +281,8 @@
                     <span> Show notifications </span>
                     <div class="switch">
                         <div class="onoffswitch">
-                            <input type="checkbox" name="collapsemenu" class="onoffswitch-checkbox" id="example" />
+                            <input type="checkbox" name="collapsemenu" class="onoffswitch-checkbox"
+                                id="example" />
                             <label class="onoffswitch-label" for="example">
                                 <span class="onoffswitch-inner"></span>
                                 <span class="onoffswitch-switch"></span>
@@ -307,7 +307,8 @@
                     <span> Enable history </span>
                     <div class="switch">
                         <div class="onoffswitch">
-                            <input type="checkbox" name="collapsemenu" class="onoffswitch-checkbox" id="example3" />
+                            <input type="checkbox" name="collapsemenu" class="onoffswitch-checkbox"
+                                id="example3" />
                             <label class="onoffswitch-label" for="example3">
                                 <span class="onoffswitch-inner"></span>
                                 <span class="onoffswitch-switch"></span>
@@ -319,7 +320,8 @@
                     <span> Show charts </span>
                     <div class="switch">
                         <div class="onoffswitch">
-                            <input type="checkbox" name="collapsemenu" class="onoffswitch-checkbox" id="example4" />
+                            <input type="checkbox" name="collapsemenu" class="onoffswitch-checkbox"
+                                id="example4" />
                             <label class="onoffswitch-label" for="example4">
                                 <span class="onoffswitch-inner"></span>
                                 <span class="onoffswitch-switch"></span>
@@ -357,7 +359,8 @@
                     <span> Update everyday </span>
                     <div class="switch">
                         <div class="onoffswitch">
-                            <input type="checkbox" name="collapsemenu" class="onoffswitch-checkbox" id="example7" />
+                            <input type="checkbox" name="collapsemenu" class="onoffswitch-checkbox"
+                                id="example7" />
                             <label class="onoffswitch-label" for="example7">
                                 <span class="onoffswitch-inner"></span>
                                 <span class="onoffswitch-switch"></span>

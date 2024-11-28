@@ -44,11 +44,6 @@ Route::get('/', function () {
     return view('home', $data);
 });
 
-// Admin Dashboard Route
-// Route::get('/admin-test', function () {
-//     return view('dashboard');
-// })->middleware(['auth', 'verified'])->name('dashboard');
-
 // Profile Management Routes
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
