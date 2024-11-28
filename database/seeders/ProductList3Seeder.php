@@ -95,39 +95,39 @@ class ProductList3Seeder extends Seeder
 'p3_title'=>['Some of Our Awesome Projects - 3'], 
 
 
-'p3_img1'=>['img/sections/angelo-pantazis.jpg'],       
+'p3_img1'=>['/img/sections/angelo-pantazis.jpg'],       
 'p3_img1_url'=>['http://www.creative-tim.com/product/paper-kit'], 
 'p3_textA1'=>['Productivity tools'], 
 'p3_textB1'=>['Beautiful Desktop for Designers'],       
 'p3_para1'=>['As this technology matures it will be cool to see what hackers are able to do with it.'], 
 
 
-'p3_img2'=>['img/sections/patrick-tomasso.jpg'],       
+'p3_img2'=>['/img/sections/patrick-tomasso.jpg'],       
 'p3_img2_url'=>['http://www.creative-tim.com/product/paper-kit'], 
 'p3_textA2'=>['Web Design'], 
 'p3_textB2'=>['Famous Website Redesign Implementation'],       
 'p3_para2'=>['Streaming services once again top the list of this year’s Emmy nominations'], 
 
-'p3_img3'=>['img/sections/luke-chesser.jpg'],       
+'p3_img3'=>['/img/sections/luke-chesser.jpg'],       
 'p3_img3_url'=>['http://www.creative-tim.com/product/paper-kit'], 
 'p3_textA3'=>['Marketing tools'], 
 'p3_textB3'=>['The Best Productivity Applications'],       
 'p3_para3'=>['Dietary supplements don’t need approval from the Food and Drug Administration.'], 
 
-'p3_img4'=>['img/sections/rawpixel-coms.jpg'],       
+'p3_img4'=>['/img/sections/rawpixel-coms.jpg'],       
 'p3_img4_url'=>['http://www.creative-tim.com/product/paper-kit'], 
 'p3_textA4'=>['Website'], 
 'p3_textB4'=>['Behance Redesign'],       
 'p3_para4'=>['The HDR rollout is being enabled via support from two major studio partners.'], 
 
 
-'p3_img5'=>['img/sections/patrick-tomasso.jpg'],       
+'p3_img5'=>['/img/sections/patrick-tomasso.jpg'],       
 'p3_img5_url'=>['http://www.creative-tim.com/product/paper-kit'], 
 'p3_textA5'=>['Android App'], 
 'p3_textB5'=>['Analytics for Android'],       
 'p3_para5'=>['Google did not offer an estimate as to when HDR support reaches its other global markets.'], 
 
-'p3_img6'=>['img/sections/rawpixel-coms.jpg'],       
+'p3_img6'=>['/img/sections/rawpixel-coms.jpg'],       
 'p3_img6_url'=>['http://www.creative-tim.com/product/paper-kit'], 
 'p3_textA6'=>['Material'], 
 'p3_textB6'=>['How to find the contacts.'],       

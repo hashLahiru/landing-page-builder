@@ -26,7 +26,10 @@
 
 @include('components.products.product-list-2', ['ProductList2Data' => $ProductList2Data])
 
-{{-- @include('components.products.product-list-3', ['ProductList3Data' => $ProductList3Data]) --}}
+@include('components.products.product-list-3', ['ProductList3Data' => $ProductList3Data]) 
+
+@include('components.products.product-list-4', ['ProductList4Data' => $ProductList4Data]) 
+
 
 <div class="wrapper">
 

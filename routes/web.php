@@ -196,36 +196,36 @@ Route::get('/', function () {
 
                          // Nithya Jayasooriya  -  27/11/2024  --------------------
 
-                        //    $ProductList3Component = Component::where('name', 'ProductList3')->first();
+                           $ProductList3Component = Component::where('name', 'ProductList3')->first();
 
   
-                        //    $ProductList3Fields = ComponentField::where('component_id', $ProductList3Component->id)
-                        //        ->with('values')
-                        //        ->get();
+                           $ProductList3Fields = ComponentField::where('component_id', $ProductList3Component->id)
+                               ->with('values')
+                               ->get();
                        
-                        //    $ProductList3Data = [];
-                        //    foreach ($ProductList3Fields as $field) {
-                        //        $ProductList3Data[$field->field_name] = $field->values->pluck('value')->first();
-                        //    }
+                           $ProductList3Data = [];
+                           foreach ($ProductList3Fields as $field) {
+                               $ProductList3Data[$field->field_name] = $field->values->pluck('value')->first();
+                           }
                            
 
 
 
-                                            //  // Nithya Jayasooriya  -  27/11/2024  --------------------
+        // Nithya Jayasooriya  -  27/11/2024  --------------------
 
-                                            //  $ProductList4Component = Component::where('name', 'ProductList4')->first();
+         $ProductList4Component = Component::where('name', 'ProductList4')->first();
 
   
-                                            //  $ProductList4Fields = ComponentField::where('component_id', $ProductList4Component->id)
-                                            //      ->with('values')
-                                            //      ->get();
+        $ProductList4Fields = ComponentField::where('component_id', $ProductList4Component->id)
+         ->with('values')
+         ->get();
                                          
-                                            //  $ProductList4Data = [];
-                                            //  foreach ($ProductList4Fields as $field) {
-                                            //      $ProductList4Data[$field->field_name] = $field->values->pluck('value')->first();
-                                            //  }
-                                            //  }
-                                    
+        $ProductList4Data = [];
+         foreach ($ProductList4Fields as $field) {
+        $ProductList4Data[$field->field_name] = $field->values->pluck('value')->first();
+         }
+                                             
+                          
                   
 
 
@@ -242,8 +242,8 @@ Route::get('/', function () {
          'feedback3Data' => (object) $feedback3Data,
          'ProductList1Data' => (object) $ProductList1Data,
          'ProductList2Data' => (object) $ProductList2Data,
-        // 'ProductList3Data' => (object) $ProductList3Data,
-        // 'ProductList4Data' => (object) $ProductList4Data,
+         'ProductList3Data' => (object) $ProductList3Data,
+         'ProductList4Data' => (object) $ProductList4Data,
     ]);
 });
 

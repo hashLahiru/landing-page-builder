@@ -12,7 +12,7 @@
           <div class="card card-profile card-plain">
             <div class="card-img-top">
               <a href="{{ $ProductList3Data->p3_img1_url ?? null }}">
-                <img class="img" src="{{asset($ProductList2Data->p3_img1 ?? 'img/default.jpg') }}" />
+                <img class="img" src="{{asset($ProductList3Data->p3_img1 ?? 'img/default.jpg') }}" />
               </a>
             </div>
             <div class="card-body">
@@ -28,7 +28,7 @@
           <div class="card card-profile card-plain">
             <div class="card-img-top">
               <a href=" {{ $ProductList3Data->p3_img2_url ?? null }}">
-                <img class="img" src="{{asset($ProductList2Data->p3_img2 ?? 'img/default.jpg') }}" />
+                <img class="img" src="{{asset($ProductList3Data->p3_img2 ?? 'img/default.jpg') }}" />
               </a>
             </div>
             <div class="card-body">
@@ -44,7 +44,7 @@
           <div class="card card-profile card-plain">
             <div class="card-img-top">
               <a href=" {{ $ProductList3Data->p3_img3_url ?? null }}  ">
-                <img class="img" src="{{asset($ProductList2Data->p3_img3 ?? 'img/default.jpg') }}" />
+                <img class="img" src="{{asset($ProductList3Data->p3_img3 ?? 'img/default.jpg') }}" />
               </a>
             </div>
             <div class="card-body">
@@ -59,13 +59,29 @@
         <div class="col-md-4">
           <div class="card card-profile card-plain">
             <div class="card-img-top">
-              <a href="{{ $ProductList3Data->p3_img5_url ?? null }}">
-                <img class="img" src="{{asset('img/sections/rawpixel-coms.jpg') }}" />
+              <a href="{{ $ProductList3Data->p3_img4_url ?? null }}">
+                <img class="img" src="{{asset($ProductList3Data->p3_img4 ?? 'img/default.jpg') }}" />
+              </a>
+            </div>
+            <div class="card-body">
+              <h6 class="card-category">{{ $ProductList3Data->p3_textA4 ?? null }}</h6>
+              <h4 class="card-title">{{ $ProductList3Data->p3_textB4 ?? null }}</h4>
+              <p class="card-description">
+                {{ $ProductList3Data->p3_para4 ?? null }}
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card card-profile card-plain">
+            <div class="card-img-top">
+              <a href=" {{ $ProductList3Data->p3_img5_url ?? null }}">
+                <img class="img" src="{{asset($ProductList3Data->p3_img5 ?? 'img/default.jpg') }}" />
               </a>
             </div>
             <div class="card-body">
               <h6 class="card-category">{{ $ProductList3Data->p3_textA5 ?? null }}</h6>
-              <h4 class="card-title">{{ $ProductList3Data->p3_textB5 ?? null }}</h4>
+              <h4 class="card-title"> {{ $ProductList3Data->p3_textB5 ?? null }}</h4>
               <p class="card-description">
                 {{ $ProductList3Data->p3_para5 ?? null }}
               </p>
@@ -75,31 +91,15 @@
         <div class="col-md-4">
           <div class="card card-profile card-plain">
             <div class="card-img-top">
-              <a href=" {{ $ProductList3Data->p3_para5 ?? null }}">
-                <img class="img" src="{{asset('img/sections/patrick-tomasso.jpg') }}" />
+              <a href="{{ $ProductList3Data->p3_img6_url ?? null }}">
+                <img class="img" src="{{asset($ProductList3Data->p3_img6 ?? 'img/default.jpg') }}" />
               </a>
             </div>
-            <div class="card-body">
-              <h6 class="card-category">{{ $ProductList3Data->p3_para5 ?? null }}</h6>
-              <h4 class="card-title"> {{ $ProductList3Data->p3_para5 ?? null }}</h4>
-              <p class="card-description">
-                {{ $ProductList3Data->p3_para5 ?? null }}
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card card-profile card-plain">
-            <div class="card-img-top">
-              <a href="http://www.creative-tim.com/product/paper-kit">
-                <img class="img" src="{{asset('img/sections/rawpixel-coms.jpg') }}" />
-              </a>
-            </div>
-            <div class="card-body">
-              <h6 class="card-category">Material</h6>
-              <h4 class="card-title">How to find the contacts.</h4>
-              <p class="card-description">
-                Boom, the invitations start flying and Brella makes it easy to accept/decline
+            <div class="card-body" >
+              <h6 class="card-category">{{ $ProductList3Data->p3_textA6 ?? null }}</h6>
+              <h4 class="card-title">{{ $ProductList3Data->p3_textB6 ?? null }}</h4>
+              <p  class="card-description" >
+                {{ $ProductList3Data->p3_para6 ?? null }}
               </p>
             </div>
           </div>

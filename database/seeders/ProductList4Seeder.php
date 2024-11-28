@@ -26,6 +26,7 @@ class ProductList4Seeder extends Seeder
 
 
 'p4_img1',
+'p4_imgicon1',
 'p4_textA1',
 'p4_textB1',
 'p4_para1',
@@ -42,10 +43,12 @@ class ProductList4Seeder extends Seeder
 
 
 'p4_img2',
+'p4_imgicon2',
 'p4_textA2',
 'p4_textB2',
 'p4_para2',
 'p4_btn2_text',
+
 'p4_btn2_icon',
 'p4_btn2_url',
 'p4_iconA2',
@@ -54,6 +57,7 @@ class ProductList4Seeder extends Seeder
 'p4_iconB2_url',
 'p4_iconC2',
 'p4_iconC2_url',
+
 
 
 
@@ -106,12 +110,13 @@ class ProductList4Seeder extends Seeder
 
 
 
-'p4_img2'=>[''], 
+'p4_img2'=>['img/sections/john-towner.jpg'], 
+'p4_imgicon2'=>['nc-icon nc-controller-modern'],
 'p4_textA2'=>['Design'], 
 'p4_textB2'=>['The aesthetic quality of a product'],
 'p4_textB2_url'=>['javascript:;'],  
 'p4_para2'=>['Eventually, the data collected from the grant program could allow the two to play a bit of machine learning moneyball — valuing machine learning engineers without traditional metrics (like having a PhD from Stanford)...'], 
-'p4_btn2_text'=>['READ MORE'], 
+'p4_btn2_text'=>['READ MORE'],
 'p4_btn2_icon'=>['fa fa-book'], 
 'p4_btn2_url'=>['javascript:;'], 
 'p4_iconA2'=>['fa fa-apple'], 
@@ -119,18 +124,10 @@ class ProductList4Seeder extends Seeder
 'p4_iconB2'=>['fa fa-android'], 
 'p4_iconB2_url'=>['javascript:;'], 
 'p4_iconC2'=>['fa fa-windows'], 
-'p4_iconC2_url'=>['javascript:;'], 
+'p4_iconC2_url'=>['javascript:;'],
 
-
-
-
-            ];
+           ];
 
         return $sampleValues[$field] ?? [];
     }
 }
-
-
-
-
-
