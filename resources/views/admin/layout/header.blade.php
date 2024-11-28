@@ -30,26 +30,19 @@
                     </div>
                     <div class="logo-element">IN+</div>
                 </li>
-                <li class="active">
-                    <a href="index.html"><i class="fa fa-th-large"></i>
-                        <span class="nav-label">Dashboards</span>
-                        <span class="fa arrow"></span></a>
-                    <ul class="nav nav-second-level">
-                        <li class="active"><a href="index.html">Dashboard v.1</a></li>
-                        <li><a href="dashboard_2.html">Dashboard v.2</a></li>
-                        <li><a href="dashboard_3.html">Dashboard v.3</a></li>
-                        <li><a href="dashboard_4_1.html">Dashboard v.4</a></li>
-                        <li><a href="dashboard_5.html">Dashboard v.5 </a></li>
-                    </ul>
-                </li>
-                <li>
+                <li class="{{ Request::is('page-editor') ? 'active' : '' }}">
                     <a href="/page-editor"><i class="fa fa-diamond"></i>
                         <span class="nav-label">Landing Page</span></a>
                 </li>
-                <li>
-                    <a href="/image-uploader"><i class="fa fa-diamond"></i>
+                <li class="{{ Request::is('image-uploader') ? 'active' : '' }}">
+                    <a href="/image-uploader"><i class="fa fa-picture-o"></i>
                         <span class="nav-label">Image Uploader</span></a>
                 </li>
+                <li class="{{ Request::is('messages') ? 'active' : '' }}">
+                    <a href="/messages"><i class="fa fa-envelope"></i>
+                        <span class="nav-label">Mailbox</span></a>
+                </li>
+
             </ul>
         </div>
     </nav>
@@ -58,7 +51,8 @@
         <div class="row border-bottom">
             <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
                 <div class="navbar-header">
-                    <a class="navbar-minimalize minimalize-styl-2 btn btn-primary" href="#"><i class="fa fa-bars"></i>
+                    <a class="navbar-minimalize minimalize-styl-2 btn btn-primary" href="#"><i
+                            class="fa fa-bars"></i>
                     </a>
                     <form role="search" class="navbar-form-custom" action="search_results.html">
                         <div class="form-group">
