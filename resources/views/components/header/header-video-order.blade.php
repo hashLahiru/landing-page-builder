@@ -1,4 +1,4 @@
-<div class="page-header" style="background-image: url('{{ $headerData->background_image_url ?? null }}');">
+<div class="page-header" style="background-image: url('{{ asset($headerData->background_image_url ?? '') }}');">
     <div class="filter"></div>
     <div class="content-center">
         <div class="container">

@@ -171,15 +171,24 @@
                             updated_fields: updatedFields
                         },
                         success: function(response) {
-                            alert('Changes saved successfully!');
+                            toastr.clear();
+                            toastr.success('Changes saved successfully!');
+
+                            // Clear the dynamically loaded fields and labels
+                            $('#componentFieldsContainer').empty();
+
+                            // Optionally reset the `updatedFields` object
+                            updatedFields = {};
                         },
                         error: function(xhr, status, error) {
                             console.error('Error saving fields:', error);
-                            alert('An error occurred while saving changes.');
+                            toastr.clear();
+                            toastr.error('An error occurred while saving changes.');
                         }
                     });
                 } else {
-                    alert('Please select a component.');
+                    toastr.clear();
+                    toastr.error('Please select a component.');
                 }
             });
         });

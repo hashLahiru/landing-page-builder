@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-transparent fixed-top">
+<nav class="navbar navbar-expand-lg fixed-top nav-down">
     <div class="container">
         <div class="navbar-translate">
             <a class="navbar-brand" href="/" rel="tooltip" title="Paper Kit 2 PRO" data-placement="bottom">
