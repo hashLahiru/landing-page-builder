@@ -2,7 +2,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-6 ml-auto mr-auto text-center">
-          <h2 class="title">What Clients Say</h2>
+          <h2 class="title"> {{ $feedback3Data->fb3_title ?? null }}</h2>
         </div>
       </div>
       <div class="row">
@@ -11,17 +11,17 @@
             <div class="card-body">
               <div class="author">
                 <a href="javascript:;">
-                  <img src="{{ asset('/img/faces/joe-gardner-2.jpg') }}" alt="..." class="avatar img-raised">
+                  <img src="{{ asset($feedback3Data->fb3_img1 ?? 'img/default.jpg') }}" alt="..." class="avatar img-raised">
                
-                  <span>Erik Johnson</span>
+                  <span>{{ $feedback3Data->fb3_text1 ?? null }}</span>
                 </a>
               </div>
               <span class="category-social pull-right">
-                <i class="fa fa-quote-right"></i>
+                <i class="{{ $feedback3Data->fb3_icon1 ?? null }}"></i>
               </span>
               <div class="clearfix"></div>
               <p class="card-description">
-                "During the first selection of grant winners on the essential aspects, and the products are not burdened with non-essentials. Back to purity, back to simplicity. At best, it is self-explanatory."
+                {{ $feedback3Data->fb3_para1 ?? null }}
               </p>
             </div>
           </div>
@@ -31,18 +31,17 @@
             <div class="card-body">
               <div class="author">
                 <a href="javascript:;">
-                  <img src="{{ asset('/img/faces/erik-lucatero-2.jpg') }}" alt="..." class="avatar img-raised">
+                  <img src="{{ asset($feedback3Data->fb3_img2 ?? 'img/default.jpg') }}" alt="..." class="avatar img-raised">
 
-                  <span>Erik Johnson</span>
+                  <span>{{ $feedback3Data->fb3_text2 ?? null }}</span>
                 </a>
               </div>
               <span class="category-social pull-right">
-                <i class="fa fa-quote-right"></i>
+                <i class="{{ $feedback3Data->fb3_icon2 ?? null }}"></i>
               </span>
               <div class="clearfix"></div>
               <p class="card-description">
-                "The plan is to add additional flexibility in the future to allow applicants to make a case for how much money they actually need. Less, but better – because it concentrates on the essential aspects, and the products are not burdened
-                with non-essentials..."
+                {{ $feedback3Data->fb3_para2 ?? null }}
               </p>
             </div>
           </div>
@@ -52,17 +51,17 @@
             <div class="card-body">
               <div class="author">
                 <a href="javascript:;">
-                  <img src="{{ asset('/img/faces/kaci-baum-2.jpg') }}" alt="..." class="avatar img-raised">
+                  <img src="{{ asset($feedback3Data->fb3_img3 ?? 'img/default.jpg') }}" alt="..." class="avatar img-raised">
 
-                  <span>Erik Johnson</span>
+                  <span>{{ $feedback3Data->fb3_text3 ?? null }}</span>
                 </a>
               </div>
               <span class="category-social pull-right">
-                <i class="fa fa-quote-right"></i>
+                <i class="{{ $feedback3Data->fb3_icon3 ?? null }}"></i>
               </span>
               <div class="clearfix"></div>
               <p class="card-description">
-                "Simulation of many-body quantum systems with neural networks, and the products are not burdened with non-essentials. Back to purity, back to simplicity. At best, it is self-explanatory."
+                {{ $feedback3Data->fb3_para3 ?? null }}
               </p>
             </div>
           </div>
@@ -74,17 +73,17 @@
             <div class="card-body">
               <div class="author">
                 <a href="javascript:;">
-                  <img src="{{ asset('/img/faces/clem-onojeghuo-2.jpg') }}" alt="..." class="avatar img-raised">
+                  <img src="{{ asset($feedback3Data->fb3_img4 ?? 'img/default.jpg') }}" alt="..." class="avatar img-raised">
 
-                  <span>Erik Johnson</span>
+                  <span>{{ $feedback3Data->fb3_text4 ?? null }}</span>
                 </a>
               </div>
               <span class="category-social pull-right">
-                <i class="fa fa-quote-right"></i>
+                <i class="{{ $feedback3Data->fb3_icon4 ?? null }}"></i>
               </span>
               <div class="clearfix"></div>
               <p class="card-description">
-                "Machine learning for motion recognition and trajectory generation of human movement for rehabilitation with non-essentials. Back to purity, back to simplicity. At best, it is self-explanatory."
+                {{ $feedback3Data->fb3_para4 ?? null }}
               </p>
             </div>
           </div>
@@ -94,18 +93,17 @@
             <div class="card-body">
               <div class="author">
                 <a href="javascript:;">
-                  <img src="{{ asset('/img/faces/ayo-ogunseinde-2.jpg') }}" alt="..." class="avatar img-raised">
+                  <img src="{{ asset($feedback3Data->fb3_img5 ?? 'img/default.jpg') }}" alt="..." class="avatar img-raised">
 
-                  <span>Erik Johnson</span>
+                  <span>{{ $feedback3Data->fb3_text5 ?? null }}</span>
                 </a>
               </div>
               <span class="category-social pull-right">
-                <i class="fa fa-quote-right"></i>
+                <i class="{{ $feedback3Data->fb3_icon5 ?? null }}"></i>
               </span>
               <div class="clearfix"></div>
               <p class="card-description">
-                "Less, but better – because it concentrates on the essential aspects, and the products are not burdened with non-essentials. Back to purity, back to simplicity. At best, it is self-explanatory. The entire AI Grant project reminds me
-                of a cross between a Thiel Fellowship and a Kaggle competition."
+                {{ $feedback3Data->fb3_para5 ?? null }}
               </p>
             </div>
           </div>
