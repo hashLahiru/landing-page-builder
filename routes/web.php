@@ -8,8 +8,8 @@ use Illuminate\Support\Facades\Route;
 use App\Models\Component;
 use App\Models\ComponentField;
 use App\Http\Controllers\AuthenticatedSessionController;
+use App\Http\Controllers\ContactController;
 
-// Public Routes
 Route::get('/', function () {
     $headerComponent = Component::where('name', 'header')->first();
 
@@ -39,19 +39,16 @@ Route::get('/', function () {
     ]);
 });
 
-// Authentication Routes
 Route::get('/admin-test', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
-// Profile Routes (protected by auth middleware)
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-// Admin Routes (protected by auth middleware)
 Route::middleware('auth')->group(function () {
     Route::get('/admin', function () {
         return view('admin.dashboard');
@@ -60,6 +57,10 @@ Route::middleware('auth')->group(function () {
     Route::get('/admin-test', function () {
         return view('admin.dashboard');
     });
+
+    Route::get('/messages', [ContactController::class, 'index'])->name('admin.messages');
+
+    Route::get('/messages/{id}', [ContactController::class, 'show'])->name('admin.messages.show');
 
     Route::get('/page-editor', function () {
         $components = Component::all();
@@ -71,7 +72,6 @@ Route::middleware('auth')->group(function () {
     Route::post('/save-component-fields', [AdminController::class, 'saveComponentFields']);
 });
 
-// Other Routes
 Route::get('/get-component-fields/{componentId}', function ($componentId) {
     $component = Component::with('fields.values')->find($componentId);
 
@@ -95,5 +95,6 @@ Route::post('admin/image-upload', [ImageController::class, 'upload'])->name('ima
 Route::get('/landing-page/component/{id}', [LandingPageController::class, 'getComponentData']);
 
 Route::post('/logout', [AuthenticatedSessionController::class, 'destroy'])->name('logout');
+Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
 
 require __DIR__ . '/auth.php';
