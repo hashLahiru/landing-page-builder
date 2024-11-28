@@ -45,9 +45,9 @@ Route::get('/', function () {
 });
 
 // Admin Dashboard Route
-Route::get('/admin-test', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+// Route::get('/admin-test', function () {
+//     return view('dashboard');
+// })->middleware(['auth', 'verified'])->name('dashboard');
 
 // Profile Management Routes
 Route::middleware('auth')->group(function () {
