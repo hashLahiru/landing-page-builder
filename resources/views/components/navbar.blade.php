@@ -20,7 +20,8 @@
                     <a href="#about" class="nav-link">About Us</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" id="navbarDropdownMenuLink"
+                        data-toggle="dropdown">
                         Components
                     </a>
                     <div class="dropdown-menu">

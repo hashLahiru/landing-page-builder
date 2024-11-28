@@ -30,7 +30,6 @@
 
 <body class="font-sans antialiased">
     @include('components.navbar')
-
     <!-- Page Content -->
     <main>
         @yield('content')

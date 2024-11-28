@@ -44,11 +44,6 @@
             </header>
         @endisset
 
-        <!-- Page Content -->
-        <main>
-            @yield('content')
-        </main>
-
         <!-- Include Footer -->
         @include('components.footer')
 
