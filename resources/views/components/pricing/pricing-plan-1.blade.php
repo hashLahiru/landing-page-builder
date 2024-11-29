@@ -2,8 +2,8 @@
     <div class="container">
       <div class="row">
         <div class="col-md-6 ml-auto mr-auto text-center">
-          <h2 class="title">Pick the best plan for you</h2>
-          <h5 class="description">You have Free Unlimited Updates and Premium Support on each package.</h5>
+          <h2 class="title"> {{ $PricingPlan1Data->pp1_title ?? null }} </h2>
+          <h5 class="description">{{ $PricingPlan1Data->pp1_description ?? null }}</h5>
         </div>
       </div>
       <div class="space-top"></div>
@@ -12,14 +12,14 @@
           <div class="card card-pricing" data-color="orange">
             <div class="card-body">
               <div class="card-icon">
-                <span class="icon-simple"><i class="nc-icon nc-basket"></i></span>
+                <span class="icon-simple"><i class="{{ $PricingPlan1Data->pp1_icon1 ?? null }}"></i></span>
               </div>
-              <h3 class="card-title">$199</h3>
+              <h3 class="card-title">{{ $PricingPlan1Data->pp1_text1 ?? null }}</h3>
               <p class="card-description">
-                This is good if your company size is between 5 and 20 employees.
+                {{ $PricingPlan1Data->pp1_para1 ?? null }}
               </p>
               <div class="card-footer">
-                <a href="javascript:;" class="btn btn-neutral btn-round">Choose Plan</a>
+                <a href="{{ $PricingPlan1Data->pp1_btn1_url ?? null }}" class="btn btn-neutral btn-round">{{ $PricingPlan1Data->pp1_btn1_text ?? null }}</a>
               </div>
             </div>
           </div>
@@ -28,14 +28,14 @@
           <div class="card card-pricing" data-color="yellow">
             <div class="card-body">
               <div class="card-icon">
-                <span class="icon-simple"><i class="nc-icon nc-watch-time"></i></span>
+                <span class="icon-simple"><i class="{{ $PricingPlan1Data->pp1_icon2 ?? null }}"></i></span>
               </div>
-              <h3 class="card-title">$249</h3>
+              <h3 class="card-title">{{ $PricingPlan1Data->pp1_text2 ?? null }}</h3>
               <p class="card-description">
-                This is good if your company size is between 21 and 59 employees.
+                {{ $PricingPlan1Data->pp1_para2 ?? null }}
               </p>
               <div class="card-footer">
-                <a href="javascript:;" class="btn btn-neutral btn-round">Choose Plan</a>
+                <a href="  {{ $PricingPlan1Data->pp1_btn2_url ?? null }}" class="btn btn-neutral btn-round">  {{ $PricingPlan1Data->pp1_btn2_text ?? null }}</a>
               </div>
             </div>
           </div>
@@ -44,14 +44,14 @@
           <div class="card card-pricing" data-color="green">
             <div class="card-body">
               <div class="card-icon">
-                <span class="icon-simple"><i class="nc-icon nc-settings"></i></span>
+                <span class="icon-simple"><i class="{{ $PricingPlan1Data->pp1_icon3 ?? null }}"></i></span>
               </div>
-              <h3 class="card-title">$359</h3>
+              <h3 class="card-title">{{ $PricingPlan1Data->pp1_text3 ?? null }}</h3>
               <p class="card-description">
-                This is good if your company size is between 60 and 159 employees.
+                {{ $PricingPlan1Data->pp1_para3 ?? null }}
               </p>
               <div class="card-footer">
-                <a href="javascript:;" class="btn btn-neutral btn-round">Choose Plan</a>
+                <a href=" {{ $PricingPlan1Data->pp1_btn3_url ?? null }}" class="btn btn-neutral btn-round"> {{ $PricingPlan1Data->pp1_btn3_text ?? null }}</a>
               </div>
             </div>
           </div>
@@ -60,14 +60,14 @@
           <div class="card card-pricing" data-color="blue">
             <div class="card-body">
               <div class="card-icon">
-                <span class="icon-simple"><i class="nc-icon nc-istanbul"></i></span>
+                <span class="icon-simple"><i class="{{ $PricingPlan1Data->pp1_icon4 ?? null }}"></i></span>
               </div>
-              <h3 class="card-title">$599</h3>
+              <h3 class="card-title">{{ $PricingPlan1Data->pp1_text4 ?? null }}</h3>
               <p class="card-description">
-                This is good if your company size is between 160 and 299 employees.
+                {{ $PricingPlan1Data->pp1_para4 ?? null }}
               </p>
               <div class="card-footer">
-                <a href="javascript:;" class="btn btn-neutral btn-round">Choose Plan</a>
+                <a href="  {{ $PricingPlan1Data->pp1_btn4_url ?? null }}" class="btn btn-neutral btn-round">  {{ $PricingPlan1Data->pp1_btn4_text ?? null }}</a>
               </div>
             </div>
           </div>
