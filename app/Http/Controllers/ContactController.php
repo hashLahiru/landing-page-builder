@@ -27,7 +27,6 @@ class ContactController extends Controller
         return view('admin.message-view', compact('message'));
     }
 
-
     public function store(Request $request)
     {
         $validated = $request->validate([

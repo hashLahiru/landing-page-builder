@@ -1,9 +1,9 @@
-<div class="testimonials-1 section-image" style="background-image: url('{{asset('img/sections/uriel-soberanes.jpg') }} ')">
+<div class="testimonials-1 section-image" style="background-image: url('{{asset($feedback1Data->fb1_img_url ?? 'img/default.jpg') }} ')">
     <div class="container">
       <div class="row">
         <div class="col-md-6 ml-auto mr-auto text-center">
-          <h2 class="title">Our Clients Love Us</h2>
-          <h5 class="description">You need more information? Check what other persons are saying about our product. They are very happy with their purchase.</h5>
+          <h2 class="title">{{ $feedback1Data->fb1_title ?? null }}</h2>
+          <h5 class="description">{{ $feedback1Data->fb1_description ?? null }}</h5>
         </div>
       </div>
       <div class="space-top"></div>
@@ -11,18 +11,18 @@
         <div class="col-md-4">
           <div class="card card-testimonial">
             <div class="card-icon">
-              <i class="fa fa-quote-right" aria-hidden="true"></i>
+              <i class="{{ $feedback1Data->fb1_icon1 ?? null }}" aria-hidden="true"></i>
             </div>
             <div class="card-body">
               <p class="card-description">
-                Your products, all the kits that I have downloaded from your site and worked with are sooo cool! I love the color mixtures, cards... everything. Keep up the great work!
+                {{ $feedback1Data->fb1_para1 ?? null }}
               </p>
               <div class="card-footer">
-                <h4 class="card-title">Alec Thompson</h4>
-                <h6 class="card-category">@alecthompson</h6>
+                <h4 class="card-title">{{ $feedback1Data->fb1_text1 ?? null }}</h4>
+                <h6 class="card-category">{{ $feedback1Data->fb1_usertext1 ?? null }}</h6>
                 <div class="card-avatar">
                   <a href="javascript:;">
-                    <img class="img" src="{{asset('img/faces/ayo-ogunseinde-2.jpg') }}" />
+                    <img class="img" src="{{asset($feedback1Data->fb1_profile1 ?? 'img/default.jpg') }}" />
                   </a>
                 </div>
               </div>
@@ -32,18 +32,18 @@
         <div class="col-md-4">
           <div class="card card-testimonial">
             <div class="card-icon">
-              <i class="fa fa-quote-right" aria-hidden="true"></i>
+              <i class="{{ $feedback1Data->fb1_icon2 ?? null }}" aria-hidden="true"></i>
             </div>
             <div class="card-body">
               <p class="card-description">
-                "Don't be scared of the truth because we need to restart the human foundation in truth. That's why I love you like Kanye loves Kanye I love Rick Owens’ bed design but the back is not so attractive"
+                {{ $feedback1Data->fb1_para2 ?? null }}
               </p>
               <div class="card-footer">
-                <h4 class="card-title">Gina Andrew</h4>
-                <h6 class="card-category">@ginaandrew</h6>
+                <h4 class="card-title">{{ $feedback1Data->fb1_text2 ?? null }}</h4>
+                <h6 class="card-category">{{ $feedback1Data->fb1_usertext2 ?? null }}</h6>
                 <div class="card-avatar">
                   <a href="javascript:;">
-                    <img class="img" src="{{asset('img/faces/joe-gardner-2.jpg') }}" />
+                    <img class="img" src="{{asset($feedback1Data->fb1_profile2 ?? 'img/default.jpg') }}" />
                   </a>
                 </div>
               </div>
@@ -53,18 +53,18 @@
         <div class="col-md-4">
           <div class="card card-testimonial">
             <div class="card-icon">
-              <i class="fa fa-quote-right" aria-hidden="true"></i>
+              <i class="{{ $feedback1Data->fb1_icon3 ?? null }}" aria-hidden="true"></i>
             </div>
             <div class="card-body">
               <p class="card-description">
-                "Your products, all the kits that I have downloaded from your site and worked with are sooo cool! I love the color mixtures, cards... everything. Keep up the great work!"
+                {{ $feedback1Data->fb1_para3 ?? null }}
               </p>
               <div class="card-footer">
-                <h4 class="card-title">Joe West</h4>
-                <h6 class="card-category">@georgewest</h6>
+                <h4 class="card-title">{{ $feedback1Data->fb1_text3 ?? null }}</h4>
+                <h6 class="card-category">{{ $feedback1Data->fb1_usertext3 ?? null }}</h6>
                 <div class="card-avatar">
                   <a href="javascript:;">
-                    <img class="img" src="{{asset('img/faces/kaci-baum-2.jpg') }}" />
+                    <img class="img" src="{{asset($feedback1Data->fb1_profile3 ?? 'img/default.jpg') }}" />
                   </a>
                 </div>
               </div>

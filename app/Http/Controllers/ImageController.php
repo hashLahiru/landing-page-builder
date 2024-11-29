@@ -17,7 +17,6 @@ class ImageController extends Controller
         return view('admin.image-uploader', compact('images'));
     }
 
-    // Handle image upload
     public function upload(Request $request)
     {
         $request->validate([

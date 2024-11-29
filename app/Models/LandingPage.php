@@ -17,6 +17,5 @@ class LandingPage extends Model
         'watch_video_text',
         'download_text',
         'icon_class',
-
-            ];
+    ];
 }

@@ -27,13 +27,9 @@
 
 <body>
     @include('admin.layout.header')
-
-    {{-- Header Part --}}
     <main>
         @yield('content')
     </main>
-    {{-- Header End --}}
-
     @include('admin.layout.footer')
 
     <!-- jQuery -->
@@ -93,11 +89,10 @@
                 searching: true,
                 ordering: true,
                 columnDefs: [{
-                        orderable: false,
-                        targets: [0]
-                    } // Disable sorting on "Select" column
-                ],
-                dom: '<"top"f>rt<"bottom"p><"clear">' // Example: Modify the DataTable layout
+                    orderable: false,
+                    targets: [0]
+                }],
+                dom: '<"top"f>rt<"bottom"p><"clear">'
             });
 
             $('#componentDropdown').on('change', function() {
@@ -125,7 +120,7 @@
 
                                     var input = $('<input>', {
                                         type: 'text',
-                                        class: 'col-lg-10 form-control', // Bootstrap form-control class for styling
+                                        class: 'col-lg-10 form-control',
                                         name: 'field[' + field.id + ']',
                                         value: field.value,
                                     });
@@ -171,15 +166,20 @@
                             updated_fields: updatedFields
                         },
                         success: function(response) {
-                            alert('Changes saved successfully!');
+                            toastr.clear();
+                            toastr.success('Changes saved successfully!');
+                            $('#componentFieldsContainer').empty();
+                            updatedFields = {};
                         },
                         error: function(xhr, status, error) {
                             console.error('Error saving fields:', error);
-                            alert('An error occurred while saving changes.');
+                            toastr.clear();
+                            toastr.error('An error occurred while saving changes.');
                         }
                     });
                 } else {
-                    alert('Please select a component.');
+                    toastr.clear();
+                    toastr.error('Please select a component.');
                 }
             });
         });
