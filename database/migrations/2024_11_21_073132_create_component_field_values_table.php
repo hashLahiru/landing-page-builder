@@ -10,8 +10,8 @@ class CreateComponentFieldValuesTable extends Migration
     {
         Schema::create('component_field_values', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('component_field_id')->constrained('component_fields'); // Foreign key for the component field
-            $table->string('value'); // Value for the field
+            $table->foreignId('component_field_id')->constrained('component_fields');
+            $table->text('value');
             $table->timestamps();
         });
     }

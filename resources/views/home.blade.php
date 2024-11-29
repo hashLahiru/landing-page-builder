@@ -31,10 +31,12 @@
 @include('components.products.product-list-4', ['ProductList4Data' => $ProductList4Data]) 
 
 
-<div class="wrapper">
-
-    @component('components.about-us') @endcomponent
-    @component('components.cta') @endcomponent
-
-</div>
+    <div class="wrapper">
+        @component('components.product')
+        @endcomponent
+        @component('components.about-us')
+        @endcomponent
+        @component('components.cta')
+        @endcomponent
+    </div>
 @endsection

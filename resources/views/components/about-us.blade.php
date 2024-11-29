@@ -1,11 +1,11 @@
 <div class="section section-dark text-center landing-section">
     <div class="container">
-        <h2 class="title">Let's talk about us</h2>
+        <h2 class="title pb-2">Let's talk about us</h2>
         <div class="row">
             <div class="col-md-4">
                 <div class="card card-profile card-plain">
                     <div class="card-avatar">
-                        <a href="#avatar"><img src="{{ asset('img/faces/clem-onojeghuo-3.jpg') }}" alt="..."></a>
+                        <a href="#avatar"><img src="{{ asset('img/faces/joe-gardner-2.jpg') }}" alt="..."></a>
                     </div>
                     <div class="card-body">
                         <a href="#paper-kit">
