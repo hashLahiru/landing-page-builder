@@ -30,6 +30,18 @@
 
 @include('components.products.product-list-4', ['ProductList4Data' => $ProductList4Data]) 
 
+@include('components.pricing.pricing-plan-1', ['PricingPlan1Data' => $PricingPlan1Data]) 
+
+@include('components.pricing.pricing-plan-2', ['PricingPlan2Data' => $PricingPlan2Data]) 
+
+@include('components.pricing.pricing-plan-3', ['PricingPlan3Data' => $PricingPlan3Data]) 
+
+@include('components.pricing.pricing-plan-4', ['PricingPlan4Data' => $PricingPlan4Data]) 
+
+@include('components.pricing.pricing-plan-5', ['PricingPlan5Data' => $PricingPlan5Data]) 
+
+
+
 
     <div class="wrapper">
         @component('components.product')

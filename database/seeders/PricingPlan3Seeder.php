@@ -98,7 +98,7 @@ class PricingPlan3Seeder extends Seeder
 'pp3_textB1'=>['Small company'],
 'pp3_icon2'=>['nc-icon nc-air-baloon'],
 'pp3_textB2'=>['$59'],
-'pp3_para2'=>['ometimes combining two companies that compete in the same market provides...'],
+'pp3_para2'=>['sometimes combining two companies that compete in the same market provides...'],
 'pp3_btn2_text'=>['CHOOSE PLAN'],
 'pp3_btn2_url'=>['javascript:;'],
 
