@@ -25,7 +25,10 @@ class PricingPlan4Seeder extends Seeder
 'pp4_description',
 
 'pp4_textA1',
+'pp4_iconA1',
 'pp4_textA2',
+'pp4_iconA2',
+'pp4_textA3',
 'pp4_textA3',
 'pp4_textA4',
 'pp4_textA5',
