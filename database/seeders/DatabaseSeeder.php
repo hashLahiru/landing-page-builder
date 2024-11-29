@@ -32,7 +32,7 @@ class DatabaseSeeder extends Seeder
                 //$this->call(PricingPlan2Seeder::class);
                 //$this->call(PricingPlan3Seeder::class);
                //$this->call(PricingPlan4Seeder::class);
-                $this->call(PricingPlan5Seeder::class);
+                //$this->call(PricingPlan5Seeder::class);
         }
 
 }
