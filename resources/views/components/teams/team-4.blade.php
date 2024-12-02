@@ -1,9 +1,9 @@
-<div class="team-4 section-image" style="background-image: url('{{ asset('img/sections/fabio-mangione.jpg') }}')">
+<div class="team-4 section-image" style="background-image: url('{{ asset($Teams4Data->T4_mainimg ?? 'img/default.jpg') }}')">
     <div class="container">
       <div class="row">
         <div class="col-md-8 ml-auto mr-auto text-center">
-          <h2 class="title">The Executive Team 4</h2>
-          <h5 class="description">This is the paragraph where you can write more details about your team. Keep you user engaged by providing meaningful information.</h5>
+          <h2 class="title">{{ $Teams4Data->T4_title ?? null }}</h2>
+          <h5 class="description">{{ $Teams4Data->T4_description ?? null }}</h5>
           <br />
         </div>
       </div>
@@ -12,20 +12,20 @@
           <div class="card card-profile">
             <div class="card-body">
               <div class="card-avatar">
-                <a href="#avatar">
-                  <img src="{{ asset('img/faces/ayo-ogunseinde-2.jpg') }}" alt="..." />
+                <a href="{{ $Teams4Data->T4_img1_url ?? null }}">
+                  <img src="{{ asset($Teams4Data->T4_img1 ?? 'img/default.jpg') }}" alt="..." />
 
-                  <h4 class="card-title">Eric Thomson</h4>
+                  <h4 class="card-title">{{ $Teams4Data->T4_text1 ?? null }}</h4>
                 </a>
               </div>
               <p class="card-description text-center">
-                A group becomes a team when each member is sure enough of himself and his contribution to praise the skill of the others. No one can whistle a symphony. It takes an orchestra to play it.
+                {{ $Teams4Data->T4_para1 ?? null }}
               </p>
             </div>
             <div class="card-footer text-center">
-              <a href="javascript:;" class="btn btn-just-icon btn-linkedin"><i class="fa fa-linkedin"></i></a>
-              <a href="javascript:;" class="btn btn-just-icon btn-dribbble"><i class="fa fa-dribbble"></i></a>
-              <a href="javascript:;" class="btn btn-just-icon btn-instagram"><i class="fa fa-instagram"></i></a>
+              <a href="{{ $Teams4Data->T4_iconA1_url ?? null }}" class="btn btn-just-icon btn-linkedin"><i class="{{ $Teams4Data->T4_iconA1 ?? null }}"></i></a>
+              <a href="{{ $Teams4Data->T4_iconB1_url ?? null }}" class="btn btn-just-icon btn-dribbble"><i class="{{ $Teams4Data->T4_iconB1 ?? null }}"></i></a>
+              <a href="{{ $Teams4Data->T4_iconC1_url ?? null }}" class="btn btn-just-icon btn-instagram"><i class="{{ $Teams4Data->T4_iconC1 ?? null }}"></i></a>
             </div>
           </div>
         </div>
@@ -33,20 +33,20 @@
           <div class="card card-profile">
             <div class="card-body">
               <div class="card-avatar">
-                <a href="#avatar">
-                  <img src="{{ asset('img/faces/joe-gardner-2.jpg') }}" alt="..." />
+                <a href="{{ $Teams4Data->T4_img2_url ?? null }}">
+                  <img src="{{ asset($Teams4Data->T4_img2 ?? 'img/default.jpg') }}" alt="..." />
 
-                  <h4 class="card-title">Sophia West</h4>
+                  <h4 class="card-title">{{ $Teams4Data->T4_text2 ?? null }}</h4>
                 </a>
               </div>
               <p class="card-description text-center">
-                The strength of the team is each individual member. The strength of each member is the team. If you can laugh together, you can work together, silence isn’t golden, it’s deadly.
+                {{ $Teams4Data->T4_para2 ?? null }}
               </p>
             </div>
             <div class="card-footer text-center">
-              <a href="javascript:;" class="btn btn-just-icon btn-linkedin"><i class="fa fa-linkedin"></i></a>
-              <a href="javascript:;" class="btn btn-just-icon btn-dribbble"><i class="fa fa-dribbble"></i></a>
-              <a href="javascript:;" class="btn btn-just-icon btn-pinterest"><i class="fa fa-pinterest"></i></a>
+              <a href="{{ $Teams4Data->T4_iconA2_url ?? null }}" class="btn btn-just-icon btn-linkedin"><i class="{{ $Teams4Data->T4_iconA2 ?? null }}"></i></a>
+              <a href="{{ $Teams4Data->T4_iconB2_url ?? null }}" class="btn btn-just-icon btn-dribbble"><i class="{{ $Teams4Data->T4_iconB2 ?? null }}"></i></a>
+              <a href="{{ $Teams4Data->T4_iconC2_url ?? null }}" class="btn btn-just-icon btn-pinterest"><i class="{{ $Teams4Data->T4_iconC2 ?? null }}"></i></a>
             </div>
           </div>
         </div>
@@ -54,20 +54,20 @@
           <div class="card card-profile">
             <div class="card-body">
               <div class="card-avatar">
-                <a href="#avatar">
-                  <img src="{{ asset('img/faces/clem-onojeghuo-2.jpg') }}" alt="..." />
+                <a href="{{ $Teams4Data->T4_img3_url ?? null }}">
+                  <img src="{{ asset($Teams4Data->T4_img3 ?? 'img/default.jpg') }}" alt="..." />
 
-                  <h4 class="card-title">Lucas Andrew</h4>
+                  <h4 class="card-title">{{ $Teams4Data->T4_text3 ?? null }}</h4>
                 </a>
               </div>
               <p class="card-description text-center">
-                Great teams do not hold back with one another. They are unafraid to air their dirty laundry. They admit their mistakes, their weaknesses and their concerns without fear of reprisal.
+                {{ $Teams4Data->T4_para3 ?? null }}
               </p>
             </div>
             <div class="card-footer text-center">
-              <a href="javascript:;" class="btn btn-just-icon btn-youtube"><i class="fa fa-youtube"></i></a>
-              <a href="javascript:;" class="btn btn-just-icon btn-twitter"><i class="fa fa-twitter"></i></a>
-              <a href="javascript:;" class="btn btn-just-icon btn-instagram"><i class="fa fa-instagram"></i></a>
+              <a href="{{ $Teams4Data->T4_iconA3_url ?? null }}" class="btn btn-just-icon btn-youtube"><i class="{{ $Teams4Data->T4_iconA3 ?? null }}"></i></a>
+              <a href="{{ $Teams4Data->T4_iconB3_url ?? null }}" class="btn btn-just-icon btn-twitter"><i class="{{ $Teams4Data->T4_iconB3 ?? null }}"></i></a>
+              <a href="{{ $Teams4Data->T4_iconC3_url ?? null }}" class="btn btn-just-icon btn-instagram"><i class="{{ $Teams4Data->T4_iconC3 ?? null }}"></i></a>
             </div>
           </div>
         </div>

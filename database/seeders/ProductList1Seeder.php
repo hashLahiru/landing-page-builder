@@ -23,22 +23,16 @@ class ProductList1Seeder extends Seeder
       
 'p1_title',
 'p1_description',
-
 'p1_nav1',
 'p1_navl_url',
-
 'p1_nav2',
 'p1_nav2_url',
-           
 'p1_nav3',
 'p1_nav3_url',
-
 'p1_nav4',
 'p1_nav4_url',
-
 'p1_nav5',
 'p1_nav5_url',
-
 'p1_img1',
 'p1_textA1',
 'p1_textB1',
@@ -46,8 +40,6 @@ class ProductList1Seeder extends Seeder
 'p1_btn1_text',
 'p1_btn1_icon',
 'p1_btn1_url',
-
-
 'p1_img2',
 'p1_textA2',
 'p1_textB2',
@@ -55,7 +47,6 @@ class ProductList1Seeder extends Seeder
 'p1_btn2_text',
 'p1_btn2_icon',
 'p1_btn2_url',
-
 'p1_img3',
 'p1_textA3',
 'p1_textB3',
@@ -63,7 +54,6 @@ class ProductList1Seeder extends Seeder
 'p1_btn3_text',
 'p1_btn3_icon',
 'p1_btn3_url',
-
 'p1_img4',
 'p1_textA4',
 'p1_textB4',
@@ -102,22 +92,16 @@ class ProductList1Seeder extends Seeder
                 
 'p1_title' =>['Some of Our Awesome Products - 1'],
 'p1_description'=>['This is the paragraph where you can write more details about your projects. Keep you user engaged by providing meaningful information.'],
-
 'p1_nav1'=>['All categories'],
 'p1_navl_url'=>['#pill-1'],
-
 'p1_nav2'=>['Marketing'],
 'p1_nav2_url'=>['#pill-2'],
-           
 'p1_nav3'=>['Development'],
 'p1_nav3_url'=>['#pill-3'],
-
 'p1_nav4'=>['Productivity'],
 'p1_nav4_url'=>['#pill-4'],
-
 'p1_nav5'=>['Web Design'],
 'p1_nav5_url'=>['#pill-5'],
-
 'p1_img1'=>['/img/sections/pavel-kosov.jpg'],
 'p1_textA1'=>['Productivy Apps'],
 'p1_textB1'=>['The Best Productivity Apps'],
@@ -126,8 +110,6 @@ class ProductList1Seeder extends Seeder
 'p1_btn1_text'=>['READ ARTICLE'],
 'p1_btn1_icon'=>['fa fa-book'],
 'p1_btn1_url'=>['javascript:;'],
-
-
 'p1_img2'=>['/img/sections/gukhwa-jang.jpg'],
 'p1_textA2'=>['Materials'],
 'p1_textB2'=>['US venture investment ticks up'],
@@ -135,7 +117,6 @@ class ProductList1Seeder extends Seeder
 'p1_btn2_text'=>['READ ARTICLE'],
 'p1_btn2_icon'=>['fa fa-book'],
 'p1_btn2_url'=>['javascript:;'],
-
 'p1_img3'=>['/img/sections/joshua-stannard.jpg'],
 'p1_textA3'=>['Productivy Apps'],
 'p1_textB3'=>['MateLabs mixes machine'],
@@ -144,7 +125,6 @@ class ProductList1Seeder extends Seeder
 'p1_btn3_text'=>['READ ARTICLE'],
 'p1_btn3_icon'=>['fa fa-book'],
 'p1_btn3_url'=>['javascript:;'],
-
 'p1_img4'=>['/img/sections/ilya-yakover.jpg'],
 'p1_textA4'=>['Materials'],
 'p1_textB4'=>['How to find the ‘right’ contacts.'],
