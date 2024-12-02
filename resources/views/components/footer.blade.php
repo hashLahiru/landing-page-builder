@@ -3,16 +3,16 @@
     <div class="row">
     <nav class="footer-nav">
         <ul>
-        <li><a href="https://www.creative-tim.com/" target="_blank">Creative Tim</a></li>
-        <li><a href="http://blog.creative-tim.com/" target="_blank">Blog</a></li>
-        <li><a href="https://www.creative-tim.com/license" target="_blank">Licenses</a></li>
+        <li><a href="{{ $footerData->footer_text1_url ?? null }}" target="_blank">{{ $footerData->footer_text1 ?? null }}</a></li>
+        <li><a href="{{ $footerData->footer_text2_url ?? null }}" target="_blank">{{ $footerData->footer_text2 ?? null }}</a></li>
+        <li><a href="{{ $footerData->footer_text3_url ?? null }}" target="_blank">{{ $footerData->footer_text3 ?? null }}</a></li>
         </ul>
     </nav>
     <div class="credits ml-auto">
         <span class="copyright">
-        © <script>
+            {{ $footerData->footer_textA ?? null }} <script>
             document.write(new Date().getFullYear())
-        </script>, made with <i class="fa fa-heart heart"></i> by Creative Tim
+        </script> {{ $footerData->footer_textB ?? null }}<i class="{{ $footerData->footer_icon ?? null }}"></i>{{ $footerData->footer_textC ?? null }}
         </span>
     </div>
     </div>

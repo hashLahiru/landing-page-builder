@@ -26,10 +26,8 @@ class PricingPlan5Seeder extends Seeder
 'pp5_nav2',
 'pp5_nav2_url',
 'pp5_description',
-
 'pp5_headertextA1',
 'pp5_headertextA2',
-
 'pp5_numA1',
 'pp5_textA1',
 'pp5_numA2',
@@ -40,12 +38,8 @@ class PricingPlan5Seeder extends Seeder
 'pp5_textA4',
 'pp5_btn1_text',
 'pp5_btn1_url',
-
-
-
 'pp5_headertextB1',
 'pp5_headertextB2',
-
 'pp5_numB1',
 'pp5_textB1',
 'pp5_numB2',
@@ -56,8 +50,6 @@ class PricingPlan5Seeder extends Seeder
 'pp5_textB4',
 'pp5_btn2_text',
 'pp5_btn2_url',
-
-
 'pp5_headertextC1',
 'pp5_headertextC2',
 'pp5_numC1',
