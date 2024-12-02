@@ -64,7 +64,7 @@
 @include('components.about-us', ['aboutData' => $aboutData]) 
 
 
-{{-- @include('components.footer', ['footerData' => $footerData]) --}}
+{{-- @include('components.layout.footer', ['footerData' => $footerData]) --}}
 
 
 
