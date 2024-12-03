@@ -61,6 +61,19 @@ Route::get('/', function () {
     return view('home', $data);
 });
 
+// Spice Web Template
+Route::get('/spice-home', function () {
+    return view('spice-web-template.pages.home');
+});
+
+Route::get('/spice-products',function(){
+    return view('spice-web-template.pages.products');
+});
+
+Route::get('/spice-contactus',function(){
+    return view('spice-web-template.pages.contactUs');
+});
+
 // Profile Management Routes
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
