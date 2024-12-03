@@ -27,11 +27,16 @@ class ContactController extends Controller
         return view('admin.message-view', compact('message'));
     }
 
+   
+
     public function store(Request $request)
     {
+
+        
         $validated = $request->validate([
             'name' => 'required|string|max:255',
             'email' => 'required|email|max:255',
+            'subject' => 'required|string|max:255',
             'message' => 'required|string',
         ]);
 
@@ -42,6 +47,8 @@ class ContactController extends Controller
             'status' => 'unseen',
         ]);
 
-        return redirect()->back()->with('success', 'Message sent successfully!');
+        
+        // return response('Message sent successfully!', 200);
+         return redirect()->back()->with('success', 'Message sent successfully!');
     }
 }

@@ -15,6 +15,10 @@
                             <input class="form-control" name="email" placeholder="Email">
                         </div>
                     </div>
+                    <div class="col-md-15">
+                        <label>Subject</label>
+                        <input class="form-control" name="subject" placeholder="Subject">
+                    </div>
                     <label>Message</label>
                     <textarea class="form-control" name="message" rows="4"
                         placeholder="Tell us your thoughts and feelings..."></textarea>

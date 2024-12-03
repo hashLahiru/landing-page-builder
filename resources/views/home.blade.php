@@ -64,15 +64,8 @@
 @include('components.about-us', ['aboutData' => $aboutData]) 
 
 
+
 {{-- @include('components.layout.footer', ['footerData' => $footerData]) --}}
-
-
-
-
-
-
-
-
 
 
 
@@ -84,5 +77,9 @@
         @endcomponent --}}
         {{-- @component('components.cta')
         @endcomponent --}}
+        @component('components.CTA.cta-1')
+        @endcomponent
+        @component('components.CTA.cta-2')
+        @endcomponent
     </div>
 @endsection

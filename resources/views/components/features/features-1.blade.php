@@ -1,4 +1,4 @@
-  <div class="features-1">
+  <div class="features-1" id="features-1">
       <div class="container">
         <div class="row">
           <div class="col-md-8 ml-auto mr-auto text-center">
