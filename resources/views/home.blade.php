@@ -62,18 +62,11 @@
 
     @include('components.feedbacks.feedback-3', ['feedback3Data' => $feedback3Data])
 
-    @include('components.about-us', ['aboutData' => $aboutData])
-
-    @include('components.footer')
-    {{-- @include('components.layout.footer', ['footerData' => $footerData]) --}}
+@include('components.about-us', ['aboutData' => $aboutData]) 
 
 
 
-
-
-
-
-
+{{-- @include('components.layout.footer', ['footerData' => $footerData]) --}}
 
 
 
@@ -85,5 +78,9 @@
         @endcomponent --}}
         {{-- @component('components.cta')
         @endcomponent --}}
+        @component('components.CTA.cta-1')
+        @endcomponent
+        @component('components.CTA.cta-2')
+        @endcomponent
     </div>
 @endsection

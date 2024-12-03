@@ -16,6 +16,8 @@ class Feature1Seeder extends Seeder
         $component = Component::create([
             'name' => 'feature1',
             'description' => 'This is the feature1 section of the landing page',
+       
+       
         ]);
 
         $fields = [

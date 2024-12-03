@@ -41,6 +41,7 @@ Route::get('/', function () {
         'header4',
         'footer',
         'about',
+        'navbar',
     ];
 
     $data = [];
@@ -138,3 +139,9 @@ Route::post('/logout', [AuthenticatedSessionController::class, 'destroy'])->name
 
 // Authentication Routes
 require __DIR__ . '/auth.php';
+
+
+
+
+
+

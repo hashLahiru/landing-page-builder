@@ -6,7 +6,8 @@
           <div class="card-header header-raised header-primary text-center">
             <h4 class="card-title">Contact Us</h4>
           </div>
-          <form role="form" id="contact-form2" method="post">
+          <form class="contact-form" action="{{ route('contact.store') }}" method="POST">
+            @csrf
             <div class="card-body">
               <div class="row">
                 <div class="col-md-6">
@@ -50,8 +51,10 @@
                     <input type="email" name="email" class="form-control" placeholder="Email" />
                   </div>
                 </div>
-              </div>
+              </div>        
               <div class="form-group">
+                <label class="control-label">Subject</label>
+                <input type="text" name="subject" class="form-control" placeholder="Subject" />
                 <label class="control-label">Your message</label>
                 <textarea name="message" class="form-control" id="messages" rows="6" placeholder="Message"></textarea>
               </div>

@@ -2,7 +2,7 @@
   <div class="contactus-1 section-image" style="background-image: url('{{asset('img/sections/soroush-karimi.jpg') }} ')">
     <div class="container">
       <div class="row">
-        <div class="col-md-10 ml-auto mr-auto">
+        <div class="col-md-90 ml-auto mr-auto">
           <div class="card card-contact no-transition">
             <h3 class="card-title text-center">Contact Us</h3>
             <div class="row">
@@ -45,30 +45,31 @@
                 </div>
               </div>
               <div class="col-md-5 mr-auto">
-                <form role="form" id="contact-form" method="post">
+                <form class="contact-form" action="{{ route('contact.store') }}" method="POST">
+                  @csrf
                   <div class="card-body">
                     <div class="row">
-                      <div class="col-md-6">
+                      <div class="col-md-15">
                         <div class="form-group label-floating">
-                          <label class="control-label">First name</label>
-                          <input type="text" name="name" class="form-control" placeholder="First Name">
+                          <label class="control-label">Full Name</label>
+                          <input type="text" name="name" class="form-control" placeholder="Full Name">
                         </div>
-                      </div>
-                      <div class="col-md-6">
-                        <div class="form-group label-floating">
-                          <label class="control-label">Last name</label>
-                          <input type="text" name="name" class="form-control" placeholder="Last Name">
-                        </div>
-                      </div>
-                    </div>
+                    
                     <div class="form-group label-floating">
                       <label class="control-label">Email address</label>
-                      <input type="email" name="email" class="form-control" placeholder="Email" />
+                      <input type="email" name="email" class="form-control"  placeholder="Email" />
+                    </div>
+
+                    <div class="form-group label-floating">
+                      <label class="control-label">Subject</label>
+                      <input type="text" name="subject" class="form-control"  placeholder="Subject" />
                     </div>
                     <div class="form-group label-floating">
                       <label class="control-label">Your message</label>
                       <textarea name="message" class="form-control" id="message" rows="6" placeholder="Message"></textarea>
                     </div>
+                  </div>
+                </div>
                     <div class="row">
                       <div class="col-md-6">
                         <div class="form-check">
