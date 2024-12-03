@@ -2,40 +2,41 @@
 <div class="container">
     <div class="row">
       <div class="col-md-8 ml-auto mr-auto text-center">
-        <h2 class="title">Some of Our Awesome Projects - 4</h2>
-        <h5 class="description">This is the paragraph where you can write more details about your projects. Keep you user engaged by providing meaningful information.</h5>
+        <h2 class="title">{{ $ProductList4Data->p4_title ?? null }}</h2>
+        <h5 class="description">{{ $ProductList4Data->p4_description ?? null }}</h5>
       </div>
     </div>
     <div class="space-top"></div>
     <div class="row">
       <div class="col-md-5 ml-auto">
-        <div class="card" data-background="image" style="background-image: url('{{asset('img/sections/sebastien-gabrieles.jpg') }} ')">
+        <div class="card" data-background="image" style="background-image: url('{{asset($ProductList4Data->p4_img1 ?? 'img/default.jpg') }} ')">
           <div class="card-icon">
-            <i class="nc-icon nc-mobile"></i>
+            <i class="{{ $ProductList4Data->p4_imgicon1 ?? null }}"></i>
           </div>
         </div>
       </div>
       <div class="col-md-5 mr-auto">
         <div class="card card-plain">
           <div class="card-body">
-            <h6 class="card-category">Technology</h6>
-            <a href="javascript:;">
-              <h3 class="card-title">The need of a great product</h3>
+            <h6 class="card-category">{{ $ProductList4Data->p4_textA1 ?? null }}</h6>
+            <a href="{{ $ProductList4Data->p4_textB1_url ?? null }}">
+              <h3 class="card-title">{{ $ProductList4Data->p4_textB1 ?? null }}</h3>
             </a>
-            <p class="card-description">Artificial intelligence-focused investment funds are a dime a dozen these days. Everyone knows there’s money to be made from AI, but to capture value, good VCs know they need to back products and not
-              technologies.</p>
+            <p class="card-description">
+              {{ $ProductList4Data->p4_para1 ?? null }}
+            </p>
             <div class="card-footer">
-              <a href="javascript:;" class="btn btn-link btn-neutral">
-                <i class="fa fa-book" aria-hidden="true"></i> Read More
+              <a href=" {{ $ProductList4Data->p4_btn1_url ?? null }}" class="btn btn-link btn-neutral">
+                <i class="{{ $ProductList4Data->p4_btn1_icon ?? null }}" aria-hidden="true"></i>  {{ $ProductList4Data->p4_btn1_text ?? null }}
               </a>
-              <a href="javascript:;" class="btn btn-just-icon btn-link btn-neutral">
-                <i class="fa fa-apple" aria-hidden="true"></i>
+              <a href="{{ $ProductList4Data->p4_iconA1_url ?? null }}" class="btn btn-just-icon btn-link btn-neutral">
+                <i class="{{ $ProductList4Data->p4_iconA1 ?? null }}" aria-hidden="true"></i>
               </a>
-              <a href="javascript:;" class="btn btn-just-icon btn-link btn-neutral">
-                <i class="fa fa-android" aria-hidden="true"></i>
+              <a href="{{ $ProductList4Data->p4_iconB1_url ?? null }}" class="btn btn-just-icon btn-link btn-neutral">
+                <i class="{{ $ProductList4Data->p4_iconB1 ?? null }}" aria-hidden="true"></i>
               </a>
-              <a href="javascript:;" class="btn btn-just-icon btn-link btn-neutral">
-                <i class="fa fa-windows" aria-hidden="true"></i>
+              <a href="{{ $ProductList4Data->p4_iconC1_url ?? null }}" class="btn btn-just-icon btn-link btn-neutral">
+                <i class="{{ $ProductList4Data->p4_iconC1 ?? null }}" aria-hidden="true"></i>
               </a>
             </div>
           </div>
@@ -48,33 +49,34 @@
       <div class="col-md-5 ml-auto">
         <div class="card card-plain">
           <div class="card-body">
-            <h6 class="card-category">Design</h6>
-            <a href="javascript:;">
-              <h3 class="card-title">The aesthetic quality of a product</h3>
+            <h6 class="card-category"> {{ $ProductList4Data->p4_textA2 ?? null }}</h6>
+            <a href="{{ $ProductList4Data->p4_textB2_url ?? null }}">
+              <h3 class="card-title">{{ $ProductList4Data->p4_textB2 ?? null }}</h3>
             </a>
-            <p class="card-description">Eventually, the data collected from the grant program could allow the two to play a bit of machine learning moneyball — valuing machine learning engineers without traditional metrics (like having a PhD from
-              Stanford)...</p>
+            <p class="card-description">
+              {{ $ProductList4Data->p4_para2 ?? null }}
+            </p>
             <div class="card-footer">
-              <a href="javascript:;" class="btn btn-link btn-neutral">
-                <i class="fa fa-book" aria-hidden="true"></i> Read More
+              <a href="{{ $ProductList4Data->p4_btn2_url ?? null }}" class="btn btn-link btn-neutral">
+                <i class="{{ $ProductList4Data->p4_btn2_icon ?? null }}" aria-hidden="true"></i> {{ $ProductList4Data->p4_btn2_text ?? null }}
+          
+                <a href="{{ $ProductList4Data->p4_iconA2_url ?? null }}" class="btn btn-just-icon btn-link btn-neutral">
+                <i class="{{ $ProductList4Data->p4_iconA2 ?? null }}" aria-hidden="true"></i>
               </a>
-              <a href="javascript:;" class="btn btn-just-icon btn-link btn-neutral">
-                <i class="fa fa-apple" aria-hidden="true"></i>
+              <a href="{{ $ProductList4Data->p4_iconB2_url ?? null }}" class="btn btn-just-icon btn-link btn-neutral">
+                <i class="{{ $ProductList4Data->p4_iconB2 ?? null }}" aria-hidden="true"></i>
               </a>
-              <a href="javascript:;" class="btn btn-just-icon btn-link btn-neutral">
-                <i class="fa fa-android" aria-hidden="true"></i>
-              </a>
-              <a href="javascript:;" class="btn btn-just-icon btn-link btn-neutral">
-                <i class="fa fa-windows" aria-hidden="true"></i>
+              <a href="{{ $ProductList4Data->p4_iconC2_url ?? null }}" class="btn btn-just-icon btn-link btn-neutral">
+                <i class="{{ $ProductList4Data->p4_iconC2 ?? null }}" aria-hidden="true"></i>
               </a>
             </div>
           </div>
         </div>
       </div>
       <div class="col-md-5 mr-auto">
-        <div class="card" data-background="image" style="background-image: url('{{asset('img/sections/john-towner.jpg') }} ')">    
+        <div class="card" data-background="image" style="background-image: url('{{asset($ProductList4Data->p4_img2 ?? 'img/default.jpg') }} ')">    
           <div class="card-icon">
-            <i class="nc-icon nc-controller-modern"></i>
+            <i class="{{ $ProductList4Data->p4_imgicon2 ?? null }}"></i>
           </div>
         </div>
       </div>
