@@ -29,14 +29,14 @@
 </head>
 
 <body class="font-sans antialiased">
-    @include('components.navbar')
+
     <!-- Page Content -->
     <main>
         @yield('content')
     </main>
 
     <!-- Include Footer -->
-    @include('components.footer')
+
 
     <!-- JS Files -->
     <script src="{{ asset('/js/core/jquery.min.js') }}" type="text/javascript"></script>

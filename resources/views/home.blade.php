@@ -3,8 +3,9 @@
 @section('title', 'Home Page')
 
 @section('content')
-    {{-- Include the header component with data --}}
+    @include('components.navbar')
 
+    {{-- Include the header component with data --}}
     @include('components.header.header-video-order', ['headerData' => $headerData])
 
     {{-- Nithya Jayasooriya -2024/12/1 --}}
@@ -63,7 +64,7 @@
 
     @include('components.about-us', ['aboutData' => $aboutData])
 
-
+    @include('components.footer')
     {{-- @include('components.layout.footer', ['footerData' => $footerData]) --}}
 
 
