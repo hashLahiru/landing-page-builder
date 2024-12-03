@@ -23,7 +23,9 @@ Route::get('/', function () {
         'feedback2',
         'feedback3',
         'ProductList1',
-        'ProductList2'
+        'ProductList2',
+        'ProductList3',
+        'ProductList4'
     ];
 
     $data = [];
