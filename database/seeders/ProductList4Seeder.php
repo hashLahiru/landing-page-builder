@@ -23,8 +23,6 @@ class ProductList4Seeder extends Seeder
     
 'p4_title',
 'p4_description',
-
-
 'p4_img1',
 'p4_imgicon1',
 'p4_textA1',
@@ -39,16 +37,12 @@ class ProductList4Seeder extends Seeder
 'p4_iconB1_url',
 'p4_iconC1',
 'p4_iconC1_url',
-
-
-
 'p4_img2',
 'p4_imgicon2',
 'p4_textA2',
 'p4_textB2',
 'p4_para2',
 'p4_btn2_text',
-
 'p4_btn2_icon',
 'p4_btn2_url',
 'p4_iconA2',
@@ -90,8 +84,6 @@ class ProductList4Seeder extends Seeder
 
 'p4_title'=>['Some of Our Awesome Projects - 4'], 
 'p4_description'=>['This is the paragraph where you can write more details about your projects. Keep you user engaged by providing meaningful information.'], 
-
-
 'p4_img1'=>['img/sections/sebastien-gabrieles.jpg'], 
 'p4_imgicon1'=>['nc-icon nc-mobile'], 
 'p4_textA1'=>['Technology'], 
@@ -107,9 +99,6 @@ class ProductList4Seeder extends Seeder
 'p4_iconB1_url'=>['javascript:;'], 
 'p4_iconC1'=>['fa fa-windows'], 
 'p4_iconC1_url'=>['javascript:;'], 
-
-
-
 'p4_img2'=>['img/sections/john-towner.jpg'], 
 'p4_imgicon2'=>['nc-icon nc-controller-modern'],
 'p4_textA2'=>['Design'], 

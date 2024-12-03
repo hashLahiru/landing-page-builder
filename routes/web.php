@@ -25,7 +25,22 @@ Route::get('/', function () {
         'ProductList1',
         'ProductList2',
         'ProductList3',
-        'ProductList4'
+        'ProductList4',
+        'PricingPlan1',
+        'PricingPlan2',
+        'PricingPlan3',
+        'PricingPlan4',
+        'PricingPlan5',
+        'Teams1',
+        'Teams2',
+        'Teams3',
+        'Teams4',
+        'Teams5',
+        'header2',
+        'header3',
+        'header4',
+        'footer',
+        'about',
     ];
 
     $data = [];

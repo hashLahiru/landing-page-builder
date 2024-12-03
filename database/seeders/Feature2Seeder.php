@@ -21,7 +21,6 @@ class Feature2Seeder extends Seeder
         $fields = [
             'f2_title',
             'f2_description',
-
             'f2_img1_url',
             'f2_text1',
             'f2_icon1',
@@ -29,7 +28,6 @@ class Feature2Seeder extends Seeder
             'f2_button1_icon',
             'f2_button1_text',
             'f2_button1_url',
-            
             'f2_img2_url',
             'f2_text2',
             'f2_icon2',
@@ -37,7 +35,6 @@ class Feature2Seeder extends Seeder
             'f2_button2_icon',
             'f2_button2_text',
             'f2_button2_url',
-
             'f2_img3_url',
             'f2_text3',
             'f2_icon3',
@@ -75,7 +72,6 @@ class Feature2Seeder extends Seeder
 
             'f2_title' =>['Is this what you are looking for?'],
             'f2_description'=>["This is the paragraph where you can write more details about your product. Keep you user engaged by providing meaningful information. Remember that by this time, the user is curious, otherwise he wouldn't scroll to get here."],
-
             'f2_img1_url'=>['img/sections/jan-sendereks.jpg'],
             'f2_text1'=>['Design'],
             'f2_icon1'=>['nc-icon nc-world-2'],
@@ -83,7 +79,6 @@ class Feature2Seeder extends Seeder
             'f2_button1_icon'=>['fa fa-book'],
             'f2_button1_text'=>['SHOW MORE'],
             'f2_button1_url'=>['#pkp'],
-            
             'f2_img2_url'=>['img/sections/anders-jilden.jpg'],
             'f2_text2'=>['UI Kits'],
             'f2_icon2'=>['nc-icon nc-single-copy-04'],
@@ -91,7 +86,6 @@ class Feature2Seeder extends Seeder
             'f2_button2_icon'=>['fa fa-book'],
             'f2_button2_text'=>['SHOW MORE'],
             'f2_button2_url'=>['#pkp'],
-
             'f2_img3_url'=>['img/sections/uriel-soberanes.jpg'],
             'f2_text3'=>['Development'],
             'f2_icon3'=>['nc-icon nc-time-alarm'],
