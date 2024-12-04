@@ -3,7 +3,13 @@
 @section('title', 'Home Page')
 
 @section('content-spice')
-    <div class="page_wrapper">
+@include('spice-web-template.Components.PageLayout.Navbar')
+@include('spice-web-template.Components.Hero.HeroContactus')
+@include('spice-web-template.Components.CTA.Contactus')
+@include('spice-web-template.Components.PageLayout.Footer')
+@endsection
+
+    {{-- <div class="page_wrapper">
         <div id="page_preloader__bg">
             <img id="page_preloader__img"
                 src="{{ asset('SpiceWebTemplate/cdn/shop/t/2/assets/shopify_logo0294.gif?v=124153987796372640561587542594') }}"
@@ -558,4 +564,4 @@
             <i class="fa fa-angle-up" aria-hidden="true"></i>
         </a>
     </div>
-@endsection
+@endsection --}}

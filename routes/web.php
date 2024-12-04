@@ -62,10 +62,48 @@ Route::get('/', function () {
     return view('home', $data);
 });
 
-// Spice Web Template
-Route::get('/spice-home', function () {
+ //Spice Web Template
+ Route::get('/spice-home', function () {
     return view('spice-web-template.pages.home');
-});
+ });
+
+
+
+
+
+//  //Nithya Jayasooriya 2024/12/3
+// Route::get('/cat', function () {
+//     return view('spice-web-template.Components.Home.PageLayout.Footer');
+
+// });
+
+
+// //Nithya Jayasooriya 2024/12/3
+// Route::get('/', function () {
+//     return view('spice-web-template.Components.Home.ProductCate-home');
+// });
+
+
+// //Nithya Jayasooriya 2024/12/3
+// Route::get('/', function () {
+//     return view('spice-web-template.Components.Home.PopularProduct-home');
+// });
+
+
+// //Nithya Jayasooriya 2024/12/3
+// Route::get('/', function () {
+//     return view('spice-web-template.Components.Home.BlogPost-home');
+// });
+
+
+// //Nithya Jayasooriya 2024/12/3
+
+// Route::get('/', function () {
+//     return view('spice-web-template.layouts.home');
+// });
+
+
+
 
 Route::get('/spice-products',function(){
     return view('spice-web-template.pages.products');

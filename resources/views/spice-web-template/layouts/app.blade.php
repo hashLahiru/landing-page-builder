@@ -24,7 +24,7 @@
         overflow: hidden;
       }
 
-      #page_preloader__bg {
+      /* #page_preloader__bg {
         background: #fff;
         position: fixed;
         top: 0;
@@ -47,9 +47,9 @@
       #page_preloader__bg.off {
         opacity: 0;
         z-index: -10;
-      }
+      } */
 
-      #page_preloader__img {
+      /* #page_preloader__img {
         margin: -50px 0 0 -50px;
         position: absolute;
         top: 50%;
@@ -69,7 +69,7 @@
         -ms-transform: scale3d(0, 0, 1);
         -o-transform: scale3d(0, 0, 1);
         transform: scale3d(0, 0, 1);
-      }
+      } */
 
       .container {
         margin-right: auto;

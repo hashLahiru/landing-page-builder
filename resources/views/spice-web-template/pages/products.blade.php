@@ -3,8 +3,17 @@
 @section('title', 'Home Page')
 
 @section('content-spice')
+
+@include('spice-web-template.Components.PageLayout.Navbar')
+@include('spice-web-template.Components.Hero.HeroProducts')
+@include('spice-web-template.Components.Product.ProductCategories')
+@include('spice-web-template.Components.Product.ProductList')
+@include('spice-web-template.Components.PageLayout.Footer')
+
+@endsection
+
     
-    <div class="page_wrapper">
+    {{-- <div class="page_wrapper">
       <div id="page_preloader__bg">
         <img
           id="page_preloader__img"
@@ -2160,4 +2169,4 @@
       </a>
     </div>
 
-@endsection
+@endsection --}}
