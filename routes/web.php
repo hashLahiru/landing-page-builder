@@ -69,8 +69,8 @@ Route::get('/spice-home', function () {
         'HomeProductCategories',
         'PopularProduct',
         'BlogPost',
-        
-     
+
+
 
     ];
 
@@ -138,11 +138,11 @@ Route::get('/spice-home', function () {
 
 
 
-Route::get('/spice-products',function(){
+Route::get('/spice-products', function () {
     return view('spice-web-template.pages.products');
 });
 
-Route::get('/spice-contactus',function(){
+Route::get('/spice-contactus', function () {
     return view('spice-web-template.pages.contactUs');
 });
 
@@ -171,6 +171,10 @@ Route::middleware('auth')->group(function () {
         return view('admin.page-editor', [
             'components' => $components
         ]);
+    });
+
+    Route::get('/admin-products', function () {
+        return view('admin.products');
     });
 
     Route::post('/save-component-fields', [AdminController::class, 'saveComponentFields']);
@@ -210,9 +214,3 @@ Route::post('/logout', [AuthenticatedSessionController::class, 'destroy'])->name
 
 // Authentication Routes
 require __DIR__ . '/auth.php';
-
-
-
-
-
-

@@ -31,27 +31,24 @@ class DatabaseSeeder extends Seeder
                 //$this->call(PricingPlan1Seeder::class);
                 //$this->call(PricingPlan2Seeder::class);
                 //$this->call(PricingPlan3Seeder::class);
-               //$this->call(PricingPlan4Seeder::class);
+                //$this->call(PricingPlan4Seeder::class);
                 //$this->call(PricingPlan5Seeder::class);
 
-                  //$this->call(Teams1Seeder::class);
-                  //$this->call(Teams2Seeder::class);
-                  //$this->call(Teams3Seeder::class);
-                  //$this->call(Teams4Seeder::class);
-                 //$this->call(Teams5Seeder::class);
-                 //$this->call(Header2Seeder::class);
-                 //$this->call(Header3Seeder::class);
+                //$this->call(Teams1Seeder::class);
+                //$this->call(Teams2Seeder::class);
+                //$this->call(Teams3Seeder::class);
+                //$this->call(Teams4Seeder::class);
+                //$this->call(Teams5Seeder::class);
+                //$this->call(Header2Seeder::class);
+                //$this->call(Header3Seeder::class);
                 //$this->call(Header4Seeder::class);
                 //$this->call(FooterSeeder::class);
                 //$this->call(AboutSeeder::class);
-               // $this->call(navbarSeeder::class);
+                // $this->call(navbarSeeder::class);
 
-              // $this->call(HeroHomeSeeder::class);
-               // $this->call(HomeProductCategoriesSeeder::class);
-                  // $this->call(PopularProductSeeder::class);
-                  $this->call(BlogPostSeeder::class);
-               
-                
+                $this->call(HeroHomeSeeder::class);
+                $this->call(HomeProductCategoriesSeeder::class);
+                $this->call(PopularProductSeeder::class);
+                $this->call(BlogPostSeeder::class);
         }
-
 }

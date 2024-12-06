@@ -23,6 +23,7 @@
     {{-- DataTables --}}
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css" />
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/dataTables.bootstrap4.min.css" />
+    <link href="{{ asset('/admin/css/plugins/dataTables/datatables.min.css') }}" rel="stylesheet" />
 </head>
 
 <body>
@@ -32,11 +33,56 @@
     </main>
     @include('admin.layout.footer')
 
+    <style>
+        .ibox-title h5 {
+    margin: 7px 0px 7px;
+}
+    </style>
+
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     <!-- DataTables -->
     <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+    <script src="{{ asset('/admin/js/plugins/dataTables/datatables.min.js') }}"></script>
+
+    <script>
+        $(document).ready(function() {
+            $(".dataTables-example").DataTable({
+                pageLength: 25,
+                responsive: true,
+                dom: '<"html5buttons"B>lTfgitp',
+                buttons: [{
+                        extend: "copy"
+                    },
+                    {
+                        extend: "csv"
+                    },
+                    {
+                        extend: "excel",
+                        title: "ExampleFile"
+                    },
+                    {
+                        extend: "pdf",
+                        title: "ExampleFile"
+                    },
+
+                    {
+                        extend: "print",
+                        customize: function(win) {
+                            $(win.document.body).addClass("white-bg");
+                            $(win.document.body).css("font-size", "10px");
+
+                            $(win.document.body)
+                                .find("table")
+                                .addClass("compact")
+                                .css("font-size", "inherit");
+                        },
+                    },
+                ],
+            });
+        });
+    </script>
 
     <!-- DataTables Bootstrap Integration -->
     <script src="https://cdn.datatables.net/1.13.6/js/dataTables.bootstrap4.min.js"></script>

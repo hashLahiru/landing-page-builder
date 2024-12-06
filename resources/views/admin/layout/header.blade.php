@@ -42,6 +42,10 @@
                     <a href="/messages"><i class="fa fa-envelope"></i>
                         <span class="nav-label">Mailbox</span></a>
                 </li>
+                <li class="{{ Request::is('admin-products') ? 'active' : '' }}">
+                    <a href="/admin-products"><i class="fa fa-shopping-cart"></i>
+                        <span class="nav-label">Products</span></a>
+                </li>
 
             </ul>
         </div>
