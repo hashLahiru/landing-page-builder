@@ -15,10 +15,18 @@
     });
 </script> --}}
 
-@include('spice-web-template.Components.PageLayout.Navbar')
-@include('spice-web-template.Components.Hero.HeroHome')
-@include('spice-web-template.Components.Product.HomeProductCategories')
+{{-- @include('spice-web-template.Components.PageLayout.Navbar') --}}
+{{-- @include('spice-web-template.Components.Hero.HeroHome') --}}
+{{-- @include('spice-web-template.Components.Product.HomeProductCategories')
 @include('spice-web-template.Components.Product.PopularProduct') 
 @include('spice-web-template.Components.Features.BlogPost')
-@include('spice-web-template.Components.PageLayout.Footer')
+@include('spice-web-template.Components.PageLayout.Footer') --}}
+
+
+
+@include('spice-web-template.Components.Hero.HeroHome', ['HeroHomeData' => $HeroHomeData])
+@include('spice-web-template.Components.Product.HomeProductCategories', ['HomeProductCategoriesData' => $HomeProductCategoriesData])
+@include('spice-web-template.Components.Product.PopularProduct', ['PopularProductData' => $PopularProductData])
+@include('spice-web-template.Components.Features.BlogPost', ['BlogPostData' => $BlogPostData])
 @endsection 
+

@@ -35,16 +35,16 @@
                             <div class="swiper-slide image_slide">
                                 <div class="img_placeholder__wrap img_placeholder__large"
                                     style="
-                      background-image: url({{ asset('SpiceWebTemplate/cdn/shop/files/slide-1_2048x1214_crop_top7279.jpg') }});
+                      background-image: url({{ asset($HeroHomeData->HH_img_url ?? '') }});
                     ">
                                 </div>
 
                                 <div class="slide_caption position_left">
                                     <div class="container">
                                         <div class="caption_text">
-                                            <h2 style="color: #5fac00; text-transform: capitalize;">Fresh Spices, Aromatic Flavors</h2>
+                                            <h2 style="color: #5fac00; text-transform: capitalize;">{{ $HeroHomeData->HH_title ?? null }}</h2>
 
-                                            <a class="btn slider_btn" href="collections/sexy-lingerie.html">SHOP NOW</a>
+                                            <a class="btn slider_btn" href="{{ $HeroHomeData->HH_btn_url ?? null }}">{{ $HeroHomeData->HH_btn_text ?? null }}</a>
                                         </div>
                                     </div>
                                 </div>

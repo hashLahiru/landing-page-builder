@@ -62,10 +62,43 @@ Route::get('/', function () {
     return view('home', $data);
 });
 
- //Spice Web Template
- Route::get('/spice-home', function () {
-    return view('spice-web-template.pages.home');
- });
+// spice home  Page Route
+Route::get('/spice-home', function () {
+    $components = [
+        'HeroHome',
+        'HomeProductCategories',
+        'PopularProduct',
+        'BlogPost',
+        
+     
+
+    ];
+
+    $data = [];
+    foreach ($components as $componentName) {
+        $component = Component::where('name', $componentName)->first();
+        if ($component) {
+            $fields = ComponentField::where('component_id', $component->id)
+                ->with('values')
+                ->get();
+            $componentData = [];
+            foreach ($fields as $field) {
+                $componentData[$field->field_name] = $field->values->pluck('value')->first();
+            }
+            $data[$componentName . 'Data'] = (object) $componentData;
+        }
+    }
+
+    return view('spice-web-template.pages.home', $data);
+});
+
+
+
+
+//  //Spice Web Template
+//  Route::get('/spice-home', function () {
+//     return view('spice-web-template.pages.home');
+//  });
 
 
 

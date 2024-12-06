@@ -26,33 +26,26 @@
 <div id="shopify-section-1563276353830"
 class="shopify-section section section_homepage section_featured-products">
 <div class="container">
-    <h2 class="section_heading">popular products</h2>
+    <h2 class="section_heading">{{ $PopularProductData->pop_title ?? null }}</h2>
 
     <div class="row product_listing__main product_listing__main_featured">
         <div class="col-xs-4 item_3_1 item_2_1">
             <div class="product_item">
                 <div class="product_info">
                     <p class="product_name">
-                        <a href="products/schani-moong-split-chilka.html">Schani Moong...</a>
+                        <a href="{{ $PopularProductData->pop_pro1_url ?? null }}">{{ $PopularProductData->pop_pro1_name ?? null }}</a>
                     </p>
 
                     <p class="product_desc product_desc__short">
-                        Enjoy shopping in our store! Need help? You can address
-                        our 24/7 online suppo...
+                        {{ $PopularProductData->pop_paraA1 ?? null }}
                     </p>
                     <p class="product_desc product_desc__long">
-                        Enjoy shopping in our store! Need help? You can address
-                        our 24/7 online support system. There you can find all
-                        answers concerning our goods, terms and prices. So don`t
-                        waste your time on hesitation and make your purchase in
-                        our store. We bring positive emotions and elegant taste
-                        into your dishes. Remember that you can get a good
-                        benefit in our store.
+                        {{ $PopularProductData->pop_paraB1 ?? null }}
                     </p>
 
                     <div class="product_prop">
                         <p class="product_price">
-                            <span class="money">$2.10</span>
+                            <span class="money">{{ $PopularProductData->pop_price1 ?? null }}</span>
                         </p>
 
                         <p class="product_color"></p>
@@ -61,34 +54,34 @@ class="shopify-section section section_homepage section_featured-products">
 
                 <div class="product_img">
                     <a class="img_change"
-                        href="collections/salt-free/products/schani-moong-split-chilka.html">
+                        href="{{ $PopularProductData->pop_imgA1_url ?? null }}">
                         <img class="img__1"
-                            src="{{ asset('SpiceWebTemplate/cdn/shop/products/tandoori-seasoning_01_370x260_crop_topc39e.png') }}"
+                            src="{{ asset($PopularProductData->pop_imgA1 ?? '') }}"
                             alt="Schani Moong Split Chilka" />
 
                         <img class="img__2"
-                            src="{{ asset('SpiceWebTemplate/cdn/shop/products/tandoori-seasoning_02_370x260_crop_topc39e.png') }}"
+                            src="{{ asset($PopularProductData->pop_imgB1 ?? '') }}"
                             alt="Schani Moong Split Chilka" />
 
-                        <span class="product_badge new">new</span>
+                        <span class="product_badge new">{{ $PopularProductData->pop_text1 ?? null }}</span>
                     </a>
                 </div>
 
                 <div class="product_links">
-                    <form method="post" action="https://theme848-spices-store.myshopify.com/cart/add"
+                    <form method="post" action="{{ $PopularProductData->pop_action1 ?? null }}"
                         class="add_to_cart_form">
                         <input type="hidden" name="id" value="32090888503393" />
                         <button class="btn-cart" type="submit">
-                            <i class="fa fa-shopping-bag"></i>Add to cart
+                            <i class="{{ $PopularProductData->pop_btn1_icon ?? null }}"></i>{{ $PopularProductData->pop_btn1_name ?? null }}
                         </button>
                     </form>
 
-                    <a class="wishlist_btn wishlist_add_login" href="pages/wishlist.html"
-                        title="Add to the wishlist"><i class="fa fa-heart-o"
+                    <a class="wishlist_btn wishlist_add_login" href="{{ $PopularProductData->pop_iconA1_url ?? null }}"
+                        title="Add to the wishlist"><i class="{{ $PopularProductData->pop_iconA1 ?? null }}"
                             aria-hidden="true"></i></a>
 
-                    <a class="quick_view_btn" href="products/schani-moong-split-chilka.html"
-                        title="Quick view"><i class="fa fa-search-plus" aria-hidden="true"></i></a>
+                    <a class="quick_view_btn" href="{{ $PopularProductData->pop_iconB1_url ?? null }}"
+                        title="Quick view"><i class="{{ $PopularProductData->pop_iconB1 ?? null }}" aria-hidden="true"></i></a>
                 </div>
 
                 <div class="clearfix"></div>
@@ -99,26 +92,19 @@ class="shopify-section section section_homepage section_featured-products">
             <div class="product_item">
                 <div class="product_info">
                     <p class="product_name">
-                        <a href="products/mccormick-oregano-leaves.html">McCormick Or...</a>
+                        <a href="{{ $PopularProductData->pop_pro2_url ?? null }}">{{ $PopularProductData->pop_pro2_name ?? null }}</a>
                     </p>
 
                     <p class="product_desc product_desc__short">
-                        We care about our clients and never let them down. Our
-                        assortment can satisfy...
+                        {{ $PopularProductData->pop_paraA2 ?? null }}
                     </p>
                     <p class="product_desc product_desc__long">
-                        We care about our clients and never let them down. Our
-                        assortment can satisfy most whimsical clients. Enjoy
-                        shopping in our store! Need help? You can address our
-                        24/7 online support system. There you can find all
-                        answers concerning our goods, terms and prices. So don`t
-                        waste your time on hesitation and make your purchase in
-                        our store.
+                        {{ $PopularProductData->pop_paraB2 ?? null }}
                     </p>
 
                     <div class="product_prop">
                         <p class="product_price">
-                            <span class="money">$5.30</span>
+                            <span class="money">{{ $PopularProductData->pop_price2 ?? null }}</span>
                         </p>
 
                         <p class="product_color"></p>
@@ -127,34 +113,34 @@ class="shopify-section section section_homepage section_featured-products">
 
                 <div class="product_img">
                     <a class="img_change"
-                        href="collections/salt-free/products/mccormick-oregano-leaves.html">
+                        href="{{ $PopularProductData->pop_imgA2_url ?? null }}">
                         <img class="img__1"
-                            src="{{ asset('SpiceWebTemplate/cdn/shop/products/sichuan-pepper-sea-salt_01_370x260_crop_topce2f.png') }}"
+                            src="{{ asset($PopularProductData->pop_imgA2 ?? '') }}"
                             alt="McCormick Oregano Leaves" />
 
                         <img class="img__2"
-                            src="{{ asset('SpiceWebTemplate/cdn/shop/products/sichuan-pepper-sea-salt_02_370x260_crop_topce2f.png') }}"
+                            src="{{ asset($PopularProductData->pop_imgB2 ?? '') }}"
                             alt="McCormick Oregano Leaves" />
 
-                        <span class="product_badge new">new</span>
+                        <span class="product_badge new">{{ $PopularProductData->pop_text2 ?? null }}</span>
                     </a>
                 </div>
 
                 <div class="product_links">
-                    <form method="post" action="https://theme848-spices-store.myshopify.com/cart/add"
+                    <form method="post" action="{{ $PopularProductData->pop_action2 ?? null }}"
                         class="add_to_cart_form">
                         <input type="hidden" name="id" value="32090888142945" />
                         <button class="btn-cart" type="submit">
-                            <i class="fa fa-shopping-bag"></i>Add to cart
+                            <i class="{{ $PopularProductData->pop_btn2_icon ?? null }}"></i>{{ $PopularProductData->pop_btn2_name ?? null }}
                         </button>
                     </form>
 
-                    <a class="wishlist_btn wishlist_add_login" href="pages/wishlist.html"
-                        title="Add to the wishlist"><i class="fa fa-heart-o"
+                    <a class="wishlist_btn wishlist_add_login" href="{{ $PopularProductData->pop_iconA2_url ?? null }}"
+                        title="Add to the wishlist"><i class="{{ $PopularProductData->pop_iconA2 ?? null }}"
                             aria-hidden="true"></i></a>
 
-                    <a class="quick_view_btn" href="products/mccormick-oregano-leaves.html"
-                        title="Quick view"><i class="fa fa-search-plus" aria-hidden="true"></i></a>
+                    <a class="quick_view_btn" href="{{ $PopularProductData->pop_iconB2_url ?? null }}"
+                        title="Quick view"><i class="{{ $PopularProductData->pop_iconB2 ?? null }}" aria-hidden="true"></i></a>
                 </div>
 
                 <div class="clearfix"></div>
@@ -165,28 +151,21 @@ class="shopify-section section section_homepage section_featured-products">
             <div class="product_item">
                 <div class="product_info">
                     <p class="product_name">
-                        <a href="products/frontier-cinnamon-sticks.html">Frontier Cin...</a>
+                        <a href="{{ $PopularProductData->pop_pro3_url ?? null }}">{{ $PopularProductData->pop_pro3_name ?? null }}</a>
                     </p>
 
                     <p class="product_desc product_desc__short">
-                        Our spices are real bestsellers and they have a great
-                        number of faithful fans...
+                        {{ $PopularProductData->pop_paraA3 ?? null }}
                     </p>
                     <p class="product_desc product_desc__long">
-                        Our spices are real bestsellers and they have a great
-                        number of faithful fans all over the country. There is
-                        no doubt about our reputation because it`s perfect and
-                        our clients` testimonials can prove this fact. We care
-                        about our clients and never let them down. Our
-                        assortment can satisfy most whimsical clients. Enjoy
-                        shopping in our store!
+                        {{ $PopularProductData->pop_paraB3 ?? null }}
                     </p>
 
                     <div class="product_prop">
                         <p class="product_price">
-                            <span class="money money_sale">$4.20</span>
+                            <span class="money money_sale">    {{ $PopularProductData->pop_priceA3 ?? null }}</span>
 
-                            <span class="money">$3.80</span>
+                            <span class="money">    {{ $PopularProductData->pop_priceB3 ?? null }}</span>
                         </p>
 
                         <p class="product_color"></p>
@@ -195,36 +174,36 @@ class="shopify-section section section_homepage section_featured-products">
 
                 <div class="product_img">
                     <a class="img_change"
-                        href="collections/salt-free/products/frontier-cinnamon-sticks.html">
+                        href=" {{ $PopularProductData->pop_imgA3_url ?? null }}">
                         <img class="img__1"
-                            src="{{ asset('SpiceWebTemplate/cdn/shop/products/organic-bay-leaves_01_370x260_crop_top74e9.png') }}"
+                            src="{{ asset($PopularProductData->pop_imgA3 ?? '') }}"
                             alt="Frontier Cinnamon Sticks" />
 
                         <img class="img__2"
-                            src="{{ asset('SpiceWebTemplate/cdn/shop/products/organic-bay-leaves_02_370x260_crop_top74e9.png') }}"
+                            src="{{ asset($PopularProductData->pop_imgB3 ?? '') }}"
                             alt="Frontier Cinnamon Sticks" />
 
-                        <span class="product_badge new">new</span>
+                        <span class="product_badge new">{{ $PopularProductData->pop_text3 ?? null }}</span>
 
-                        <span class="product_badge sale">–10%</span>
+                        <span class="product_badge sale">{{ $PopularProductData->pop_dis_text ?? null }}</span>
                     </a>
                 </div>
 
                 <div class="product_links">
-                    <form method="post" action="https://theme848-spices-store.myshopify.com/cart/add"
+                    <form method="post" action="{{ $PopularProductData->pop_action3 ?? null }}"
                         class="add_to_cart_form">
                         <input type="hidden" name="id" value="32090888011873" />
                         <button class="btn-cart" type="submit">
-                            <i class="fa fa-shopping-bag"></i>Add to cart
+                            <i class="{{ $PopularProductData->pop_btn3_icon ?? null }}"></i>{{ $PopularProductData->pop_btn3_name ?? null }}
                         </button>
                     </form>
 
-                    <a class="wishlist_btn wishlist_add_login" href="pages/wishlist.html"
-                        title="Add to the wishlist"><i class="fa fa-heart-o"
+                    <a class="wishlist_btn wishlist_add_login" href="{{ $PopularProductData->pop_iconA3_url ?? null }}"
+                        title="Add to the wishlist"><i class="{{ $PopularProductData->pop_iconA3 ?? null }}"
                             aria-hidden="true"></i></a>
 
-                    <a class="quick_view_btn" href="products/frontier-cinnamon-sticks.html"
-                        title="Quick view"><i class="fa fa-search-plus" aria-hidden="true"></i></a>
+                    <a class="quick_view_btn" href="{{ $PopularProductData->pop_iconB3_url ?? null }}"
+                        title="Quick view"><i class="{{ $PopularProductData->pop_iconB3 ?? null }}" aria-hidden="true"></i></a>
                 </div>
 
                 <div class="clearfix"></div>

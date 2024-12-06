@@ -42,7 +42,7 @@
                                         <div class="caption_text">
                                             <h2>Products</h2>
 
-                                            <a class="btn slider_btn" href="collections/sexy-lingerie.html">SHOP NOW</a>
+                                            {{-- <a class="btn slider_btn" href="collections/sexy-lingerie.html">SHOP NOW</a> --}}
                                         </div>
                                     </div>
                                 </div>

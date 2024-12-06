@@ -46,9 +46,9 @@
 </style>
 
 <div id="shopify-section-1563274698392" class="shopify-section section section_homepage section_gallery">
-    <h4>explore & choose</h4>
+    <h4>{{ $HomeProductCategoriesData->H_cate_title1 ?? null }}</h4>
 
-    <h2>categories</h2>
+    <h2>{{ $HomeProductCategoriesData->H_cate_title2 ?? null }}</h2>
   <div>
  
 {{--  
@@ -70,10 +70,10 @@
 
           <a
             class="item_caption"
-            href="collections/candied-fruits.html"
+            href="{{ $HomeProductCategoriesData->H_cate_btn1_url ?? null }}"
           >
             <div class="caption_text">
-              <h4>COOKING INGREDIENTS</h4>
+              <h4>{{ $HomeProductCategoriesData->H_cate_btn1_text ?? null }}</h4>
             </div>
           </a>
         </div>
@@ -88,10 +88,10 @@
 
           <a
             class="item_caption"
-            href="collections/natural-flavorings-extracts.html"
+            href="{{ $HomeProductCategoriesData->H_cate_btn2_url ?? null }}"
           >
             <div class="caption_text">
-              <h4>BAKING INGREDIENTS</h4>
+              <h4>{{ $HomeProductCategoriesData->H_cate_btn2_text ?? null }}</h4>
             </div>
           </a>
         </div>
@@ -106,10 +106,10 @@
 
           <a
             class="item_caption"
-            href="collections/spice-blends.html"
+            href="{{ $HomeProductCategoriesData->H_cate_btn3_url ?? null }}"
           >
             <div class="caption_text">
-              <h4>SALTS + PEPPERCORNS</h4>
+              <h4>{{ $HomeProductCategoriesData->H_cate_btn3_text ?? null }}</h4>
             </div>
           </a>
         </div>
@@ -124,10 +124,10 @@
 
           <a
             class="item_caption"
-            href="products/black-pepper-whole.html"
+            href="{{ $HomeProductCategoriesData->H_cate_btn4_url ?? null }}"
           >
             <div class="caption_text">
-              <h4>herbs</h4>
+              <h4>{{ $HomeProductCategoriesData->H_cate_btn4_text ?? null }}</h4>
             </div>
           </a>
         </div>

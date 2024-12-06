@@ -93,16 +93,16 @@
                                         <div class="caption_text">
                                             <h2>Contact Us</h2>
 
-                                            <a class="btn slider_btn" href="collections/sexy-lingerie.html">SHOP NOW</a>
+                                            {{-- <a class="btn slider_btn" href="collections/sexy-lingerie.html">SHOP NOW</a> --}}
                                         </div>
                                     </div>
                                 </div>
                             </div>
 
-                            <div id="pagination_1563274168890" class="swiper_pagination"></div>
+                            {{-- <div id="pagination_1563274168890" class="swiper_pagination"></div>
 
                             <div id="slider_prev_1563274168890" class="swiper_btn swiper_btn__prev"></div>
-                            <div id="slider_next_1563274168890" class="swiper_btn swiper_btn__next"></div>
+                            <div id="slider_next_1563274168890" class="swiper_btn swiper_btn__next"></div> --}}
                         </div>
                     </div>
                 </div>
