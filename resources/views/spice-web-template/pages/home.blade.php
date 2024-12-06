@@ -880,6 +880,12 @@
             </div>
         </div>
 
+        <div id="floating-whatsapp">
+            <a href="https://wa.me/+94761968819?text=Hi, I need assistance!" target="_blank">
+                <img src="{{ asset('/img/icons/whatsapp.png') }}" alt="WhatsApp" />
+            </a>
+        </div>
+
         <a id="back_top" href="#">
             <i class="fa fa-angle-up" aria-hidden="true"></i>
         </a>

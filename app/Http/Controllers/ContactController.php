@@ -29,26 +29,42 @@ class ContactController extends Controller
 
    
 
-    public function store(Request $request)
-    {
+public function store(Request $request)
+{
+    $validated = $request->validate([
+        'name' => 'required|string|max:255',
+        'email' => 'required|email|max:255',
+        'subject' => 'required|string|max:255',
+        'message' => 'required|string',
+    ]);
 
-        
-        $validated = $request->validate([
-            'name' => 'required|string|max:255',
-            'email' => 'required|email|max:255',
-            'subject' => 'required|string|max:255',
-            'message' => 'required|string',
-        ]);
+    // Save the message to the database
+    $message = Message::create([
+        'name' => $validated['name'],
+        'email' => $validated['email'],
+        'subject' => $validated['subject'],
+        'message' => $validated['message'],
+        'status' => 'unseen',
+    ]);
 
-        Message::create([
-            'name' => $validated['name'],
-            'email' => $validated['email'],
-            'message' => $validated['message'],
-            'status' => 'unseen',
-        ]);
+    // Prepare email data
+    $emailData = [
+        'name' => $validated['name'],
+        'email' => $validated['email'],
+        'subject' => $validated['subject'],
+        'message' => $validated['message'],
+        'siteName' => 'Spicy World', // Replace with dynamic site name if needed
+    ];
 
-        
-        // return response('Message sent successfully!', 200);
-         return redirect()->back()->with('success', 'Message sent successfully!');
-    }
+    // Send email to the site owner
+    \Mail::to('hasinthalahiru331@gmail.com')->send(new \App\Mail\MessageNotification($emailData, true));
+
+    // Send email to the customer
+    \Mail::to($validated['email'])->send(new \App\Mail\MessageNotification($emailData, false));
+
+    return redirect()->back()->with('success', 'Message sent successfully!');
+}
+
+
+
 }

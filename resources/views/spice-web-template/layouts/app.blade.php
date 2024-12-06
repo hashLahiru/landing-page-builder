@@ -867,6 +867,27 @@
       .section_map .map_wrapper__large {
         padding: 39.06% 0 0 0;
       }
+
+      #floating-whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+#floating-whatsapp a img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#floating-whatsapp a img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
     </style>
     <link href="https://monorail-edge.shopifysvc.com/" rel="dns-prefetch" />
     <script>
