@@ -171,9 +171,9 @@ class SpiceFooterSeeder extends Seeder
             'SF_section3_text7' =>['Latest News'],
             'SF_section3_url7' =>['blogs/news.html'],
 
-            'SF_text2' =>[' ©theme848-spices-store.'],
+            'SF_text2' =>['introps - 2024 | All Right Reserved.'],
             'SF_text3_url' =>['https://www.shopify.com/?utm_campaign=poweredby&amp;utm_medium=shopify&amp;utm_source=onlinestore'],
-            'SF_text3' =>['Powered by Shopify'],
+            'SF_text3' =>['Designed by introps'],
             
             
                        

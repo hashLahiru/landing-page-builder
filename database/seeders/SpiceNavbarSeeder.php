@@ -82,16 +82,16 @@ class SpiceNavbarSeeder extends Seeder
 
             'SN_icon1' =>['level_1__trigger megamenu_trigger'],
             'SN_icon1_text' =>['Home'],
-            'SN_icon1_url' =>['https://theme764-lingerie-store.myshopify.com/'],
+            'SN_icon1_url' =>['http://127.0.0.1:8000/spice-home'],
 
             'SN_icon2' =>['level_1__trigger megamenu_trigger'],
-            'SN_icon2_text' =>['Collection'],
-            'SN_icon2_url' =>['collections.html'],
+            'SN_icon2_text' =>['Products'],
+            'SN_icon2_url' =>['http://127.0.0.1:8000/spice-products'],
 
             
-            
+           
             'SN_icon3_text' =>['Contact Us'],
-            'SN_icon2_url' =>['pages/contact-us.html'],
+            'SN_icon3_url' =>['http://127.0.0.1:8000/spice-contactus'],
 
             'SN_cart_icon' =>['fa fa-shopping-cart'],
             'SN_cart_text' =>['0 item(s)'],

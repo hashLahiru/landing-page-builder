@@ -129,7 +129,7 @@
                                 </li>
 
                                 <li class="level_1__item">
-                                    <a class="level_1__link" href="{{ $SpiceNavbarData->SN_icon2_url ?? null }}">{{ $SpiceNavbarData->SN_icon3_text ?? null }}
+                                    <a class="level_1__link" href="{{ $SpiceNavbarData->SN_icon3_url ?? null }}">{{ $SpiceNavbarData->SN_icon3_text ?? null }}
                                     </a>
                                 </li>
                             </ul>
