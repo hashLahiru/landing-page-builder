@@ -28,44 +28,43 @@
                     <div class="col-sm-3 footer_block footer_block__2_1">
                         <div class="footer_item footer_item__about">
                             <h3></h3>
-
-                            <img src="{{ asset('SpiceWebTemplate/cdn/shop/files/spiceX_225x125_crop_center8a9c.png') }}"
+                            
+                            <img src="{{ asset($SpiceFooterData->SF_logo ?? null) }}"
                                 alt="theme848-spices-store" />
 
                             <div class="about_text">
-                                <p>&copy;Powered by Shopify</p>
+                                <p>{{$SpiceFooterData->SF_text ?? null}}</p>
                             </div>
                         </div>
                     </div>
 
                     <div class="col-sm-3 footer_block">
                         <div class="footer_item footer_item__links">
-                            <h3>Categories</h3>
+                            <h3>{{$SpiceFooterData->SF_section1_topic ?? null}}</h3>
 
                             <ul>
                                 <li>
-                                    <a href="collections/candied-fruits.html">CANDIED FRUITS</a>
+                                    <a href="{{$SpiceFooterData->SF_section1_url1 ?? null}}">{{$SpiceFooterData->SF_section1_text1 ?? null}}</a>
                                 </li>
 
                                 <li>
-                                    <a href="collections/spices-herbs.html">Spices & Herbs</a>
+                                    <a href="{{$SpiceFooterData->SF_section1_url2 ?? null}}">{{$SpiceFooterData->SF_section1_text2 ?? null}}</a>
                                 </li>
 
                                 <li>
-                                    <a href="collections/natural-flavorings-extracts.html">Natural Flavorings &
-                                        Extracts</a>
+                                    <a href="{{$SpiceFooterData->SF_section1_url3 ?? null}}">{{$SpiceFooterData->SF_section1_text3 ?? null}}</a>
                                 </li>
 
                                 <li>
-                                    <a href="collections/spice-blends.html">Spice Blends</a>
+                                    <a href="{{$SpiceFooterData->SF_section1_url4 ?? null}}">{{$SpiceFooterData->SF_section1_text4 ?? null}}</a>
                                 </li>
 
                                 <li>
-                                    <a href="collections/salt-free.html">Salt-Free</a>
+                                    <a href="{{$SpiceFooterData->SF_section1_url5 ?? null}}">{{$SpiceFooterData->SF_section1_text5 ?? null}}</a>
                                 </li>
 
                                 <li>
-                                    <a href="collections/seasonings.html">Seasonings</a>
+                                    <a href="{{$SpiceFooterData->SF_section1_url6 ?? null}}">{{$SpiceFooterData->SF_section1_text6 ?? null}}</a>
                                 </li>
                             </ul>
                         </div>
@@ -73,67 +72,57 @@
 
                     <div class="col-sm-3 footer_block footer_block__2_1">
                         <div class="footer_item footer_item__links">
-                            <h3>Information</h3>
+                            <h3>{{$SpiceFooterData->SF_section2_topic ?? null}}</h3>
 
                             <ul>
                                 <li>
-                                    <a href="pages/about-us.html">About Us</a>
+                                    <a href="{{$SpiceFooterData->SF_section2_url1 ?? null}}">{{$SpiceFooterData->SF_section2_text1 ?? null}}</a>
                                 </li>
 
                                 <li>
-                                    <a href="pages/contact-us.html">Contact Us</a>
+                                    <a href="{{$SpiceFooterData->SF_section2_url2 ?? null}}">{{$SpiceFooterData->SF_section2_text2 ?? null}}</a>
                                 </li>
 
                                 <li>
-                                    <a href="collections/all.html">Catalog</a>
+                                    <a href="{{$SpiceFooterData->SF_section2_url3 ?? null}}">{{$SpiceFooterData->SF_section2_text3 ?? null}}</a>
                                 </li>
 
-                                <li>
-                                    <a href="collections.html">Collections</a>
-                                </li>
-
-                                <li>
-                                    <a href="policies/privacy-policy.html">Privacy Policy</a>
-                                </li>
-
-                                <li>
-                                    <a href="blogs/news.html">Blog</a>
-                                </li>
+         
                             </ul>
                         </div>
                     </div>
 
                     <div class="col-sm-3 footer_block">
                         <div class="footer_item footer_item__links">
-                            <h3>My Account</h3>
+                            <h3>{{$SpiceFooterData->SF_section3_topic ?? null}}</h3>
 
                             <ul>
                                 <li>
-                                    <a href="account/login4236.html">My Account</a>
+                                    <a href="{{$SpiceFooterData->SF_section3_url1 ?? null}}">{{$SpiceFooterData->SF_section3_text1 ?? null}}</a>
                                 </li>
 
                                 <li>
-                                    <a href="account/login.html">Log in</a>
+                                    <a href="{{$SpiceFooterData->SF_section3_url2 ?? null}}">{{$SpiceFooterData->SF_section3_text2 ?? null}}</a>
                                 </li>
 
                                 <li>
-                                    <a href="account/login4918.html">My Addresses</a>
+                                    <a href="{{$SpiceFooterData->SF_section3_url3 ?? null}}">{{$SpiceFooterData->SF_section3_text3 ?? null}}</a>
                                 </li>
 
                                 <li>
-                                    <a href="account/login4236.html">My Orders</a>
+                                    <a href="{{$SpiceFooterData->SF_section3_url4 ?? null}}">{{$SpiceFooterData->SF_section3_text4 ?? null}}</a>
                                 </li>
 
                                 <li>
-                                    <a href="pages/password-page.html">Password page</a>
+                                    <a href="{{$SpiceFooterData->SF_section3_url5 ?? null}}">{{$SpiceFooterData->SF_section3_text5 ?? null}}</a>
                                 </li>
 
                                 <li>
-                                    <a href="pages/contact-us.html">Contact Us</a>
+                                    <a href="{{$SpiceFooterData->SF_section3_url6 ?? null}}">{{$SpiceFooterData->SF_section3_text6 ?? null}}</a>
                                 </li>
 
                                 <li>
-                                    <a href="blogs/news.html">Latest News</a>
+                                    <a href="{{$SpiceFooterData->SF_section3_url7 ?? null}}">{{$SpiceFooterData->SF_section3_text7 ?? null}}</a>
                                 </li>
                             </ul>
                         </div>
@@ -146,10 +135,9 @@
             <div class="container">
                 <div class="footer_wrap_1">
                     <div class="footer_wrap_2 footer_center">
-                        ©theme848-spices-store.
+                        {{$SpiceFooterData->SF_text2 ?? null}}
                         <a target="_blank" rel="nofollow"
-                            href="https://www.shopify.com/?utm_campaign=poweredby&amp;utm_medium=shopify&amp;utm_source=onlinestore">Powered
-                            by Shopify</a>
+                            href="{{$SpiceFooterData->SF_text3_url ?? null}}">{{$SpiceFooterData->SF_text3 ?? null}}</a>
                     </div>
                 </div>
             </div>

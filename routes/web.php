@@ -65,11 +65,17 @@ Route::get('/', function () {
 // spice home  Page Route
 Route::get('/spice-home', function () {
     $components = [
+        'SpiceNavbar',
         'HeroHome',
         'HomeProductCategories',
         'PopularProduct',
         'BlogPost',
+        'SpiceFooter',
         
+
+        //'HeroProduct',
+        //'HeroContactUs',
+        //'SpiceContactus',
      
 
     ];
@@ -95,56 +101,92 @@ Route::get('/spice-home', function () {
 
 
 
+// spice products  Page Route
+Route::get('/spice-products', function () {
+    $components = [
+        'SpiceNavbar',
+        'HeroProduct',
+        'SpiceFooter',
+        
+
+     
+        //'HeroContactUs',
+        //'SpiceContactus',,
+        
+     
+
+    ];
+
+    $data = [];
+    foreach ($components as $componentName) {
+        $component = Component::where('name', $componentName)->first();
+        if ($component) {
+            $fields = ComponentField::where('component_id', $component->id)
+                ->with('values')
+                ->get();
+            $componentData = [];
+            foreach ($fields as $field) {
+                $componentData[$field->field_name] = $field->values->pluck('value')->first();
+            }
+            $data[$componentName . 'Data'] = (object) $componentData;
+        }
+    }
+
+    return view('spice-web-template.pages.products', $data);
+});
+
+
+
+
+
+// spice contact us   Page Route
+Route::get('/spice-contactus', function () {
+    $components = [
+        'SpiceNavbar',
+       // 'HeroContactUs',
+        'SpiceContactus',
+        'SpiceFooter',
+        
+
+    ];
+
+    $data = [];
+    foreach ($components as $componentName) {
+        $component = Component::where('name', $componentName)->first();
+        if ($component) {
+            $fields = ComponentField::where('component_id', $component->id)
+                ->with('values')
+                ->get();
+            $componentData = [];
+            foreach ($fields as $field) {
+                $componentData[$field->field_name] = $field->values->pluck('value')->first();
+            }
+            $data[$componentName . 'Data'] = (object) $componentData;
+        }
+    }
+
+    return view('spice-web-template.pages.contactUs', $data);
+});
+
+
+
+
+
 //  //Spice Web Template
 //  Route::get('/spice-home', function () {
 //     return view('spice-web-template.pages.home');
 //  });
 
 
-
-
-
-//  //Nithya Jayasooriya 2024/12/3
-// Route::get('/cat', function () {
-//     return view('spice-web-template.Components.Home.PageLayout.Footer');
-
+// Route::get('/spice-products',function(){
+//     return view('spice-web-template.pages.products');
 // });
 
 
-// //Nithya Jayasooriya 2024/12/3
-// Route::get('/', function () {
-//     return view('spice-web-template.Components.Home.ProductCate-home');
+// Route::get('/spice-contactus',function(){
+//     return view('spice-web-template.pages.contactUs');
 // });
 
-
-// //Nithya Jayasooriya 2024/12/3
-// Route::get('/', function () {
-//     return view('spice-web-template.Components.Home.PopularProduct-home');
-// });
-
-
-// //Nithya Jayasooriya 2024/12/3
-// Route::get('/', function () {
-//     return view('spice-web-template.Components.Home.BlogPost-home');
-// });
-
-
-// //Nithya Jayasooriya 2024/12/3
-
-// Route::get('/', function () {
-//     return view('spice-web-template.layouts.home');
-// });
-
-
-
-
-Route::get('/spice-products',function(){
-    return view('spice-web-template.pages.products');
-});
-
-Route::get('/spice-contactus',function(){
-    return view('spice-web-template.pages.contactUs');
-});
 
 // Profile Management Routes
 Route::middleware('auth')->group(function () {

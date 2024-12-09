@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
-use App\Models\ProductModel;
+use App\Models\HomeProductCategoriestModel;
 use Illuminate\Http\Request;
 
 class HomeProductCategoriesController extends Controller
@@ -16,6 +16,6 @@ class HomeProductCategoriesController extends Controller
             abort(500, 'Home Product Categories Data not found in the database.');
         }
 
-        return view('home', compact('HomeProductCategoriesData'));
+        return view('spice-web-template.pages.home', compact('HomeProductCategoriesData'));
     }
 }

@@ -33,14 +33,14 @@
                             <div class="swiper-slide image_slide">
                                 <div class="img_placeholder__wrap img_placeholder__large"
                                     style="
-                                   background-image: url('{{ asset('SpiceWebTemplate/cdn/shop/files/banner-1_1024x565_crop_centerb695.jpg') }}');"
+                                   background-image: url('{{ asset($HeroProductData->HP_img_url ?? '') }}');"
                       >  
                                 </div>
 
                                 <div class="slide_caption position_center">
                                     <div class="container">
                                         <div class="caption_text">
-                                            <h2>Products</h2>
+                                            <h2>{{ $HeroProductData->HP_title ?? null }}</h2>
 
                                             {{-- <a class="btn slider_btn" href="collections/sexy-lingerie.html">SHOP NOW</a> --}}
                                         </div>

@@ -49,9 +49,17 @@ class DatabaseSeeder extends Seeder
               // $this->call(HeroHomeSeeder::class);
                // $this->call(HomeProductCategoriesSeeder::class);
                   // $this->call(PopularProductSeeder::class);
-                  $this->call(BlogPostSeeder::class);
+                 // $this->call(BlogPostSeeder::class);
+                // $this->call(HeroProductSeeder::class);
+              // $this->call(HeroContactusSeeder::class);
+                //$this->call(SpiceNavbarSeeder::class);
+               // $this->call(SpiceFooterSeeder::class);
+
+               //$this->call(SpiceContactusSeeder::class);
                
                 
+
+               
         }
 
 }

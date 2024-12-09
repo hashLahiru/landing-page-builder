@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
-use App\Models\ProductModel;
+use App\Models\HeroContactusModel;
 use Illuminate\Http\Request;
 
 class HeroContactusController extends Controller
@@ -16,6 +16,6 @@ class HeroContactusController extends Controller
             abort(500, 'Hero Contactus data not found in the database.');
         }
 
-        return view('home', compact('HeroContactusData'));
+        return view('spice-web-template.pages.contactUs', compact('HeroContactusData'));
     }
 }
