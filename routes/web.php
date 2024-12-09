@@ -9,6 +9,7 @@ use App\Models\Component;
 use App\Models\ComponentField;
 use App\Http\Controllers\AuthenticatedSessionController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\AdminProductController;
 
 // Landing Page Route
 Route::get('/', function () {
@@ -69,9 +70,6 @@ Route::get('/spice-home', function () {
         'HomeProductCategories',
         'PopularProduct',
         'BlogPost',
-
-
-
     ];
 
     $data = [];
@@ -91,52 +89,6 @@ Route::get('/spice-home', function () {
 
     return view('spice-web-template.pages.home', $data);
 });
-
-
-
-
-//  //Spice Web Template
-//  Route::get('/spice-home', function () {
-//     return view('spice-web-template.pages.home');
-//  });
-
-
-
-
-
-//  //Nithya Jayasooriya 2024/12/3
-// Route::get('/cat', function () {
-//     return view('spice-web-template.Components.Home.PageLayout.Footer');
-
-// });
-
-
-// //Nithya Jayasooriya 2024/12/3
-// Route::get('/', function () {
-//     return view('spice-web-template.Components.Home.ProductCate-home');
-// });
-
-
-// //Nithya Jayasooriya 2024/12/3
-// Route::get('/', function () {
-//     return view('spice-web-template.Components.Home.PopularProduct-home');
-// });
-
-
-// //Nithya Jayasooriya 2024/12/3
-// Route::get('/', function () {
-//     return view('spice-web-template.Components.Home.BlogPost-home');
-// });
-
-
-// //Nithya Jayasooriya 2024/12/3
-
-// Route::get('/', function () {
-//     return view('spice-web-template.layouts.home');
-// });
-
-
-
 
 Route::get('/spice-products', function () {
     return view('spice-web-template.pages.products');
@@ -175,9 +127,22 @@ Route::middleware('auth')->group(function () {
 
     Route::get('/admin-products', function () {
         return view('admin.products');
-    });
+    })->name('products.view');
+
+    // Route::get('/admin-products', function () {
+    //     return view('admin.product-form');
+    // });
+
+    Route::get('/admin/products', [AdminProductController::class, 'getProducts'])->name('product.get');
+    Route::get('/product/create', [AdminProductController::class, 'create'])->name('product.create');
+    Route::post('/products', [AdminProductController::class, 'store'])->name('product.store');
+    Route::post('/product/delete', [AdminProductController::class, 'delete'])->name('product.delete');
 
     Route::post('/save-component-fields', [AdminController::class, 'saveComponentFields']);
+
+    // Routes for edit the product
+    Route::get('/product/edit/{id}', [AdminProductController::class, 'edit'])->name('product.edit');
+    Route::post('/product/update/{id}', [AdminProductController::class, 'update'])->name('product.update');
 });
 
 // Retrieve Component Fields for AJAX

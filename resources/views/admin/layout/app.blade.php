@@ -35,16 +35,23 @@
 
     <style>
         .ibox-title h5 {
-    margin: 7px 0px 7px;
-}
+            margin: 7px 0px 7px;
+        }
     </style>
 
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     <!-- DataTables -->
-    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.6/js/dataTables.bootstrap4.min.js"></script>
+
     <script src="{{ asset('/admin/js/plugins/dataTables/datatables.min.js') }}"></script>
+
+    {{-- ----------------------------------------------- --}}
+    {{-- ----------------------------------------------- --}}
+    {{-- Functions build for the dashboard by Introps IT --}}
+    {{-- ----------------------------------------------- --}}
+    {{-- ----------------------------------------------- --}}
 
     <script>
         $(document).ready(function() {
@@ -52,37 +59,88 @@
                 pageLength: 25,
                 responsive: true,
                 dom: '<"html5buttons"B>lTfgitp',
-                buttons: [{
-                        extend: "copy"
-                    },
-                    {
-                        extend: "csv"
-                    },
-                    {
-                        extend: "excel",
-                        title: "ExampleFile"
-                    },
-                    {
-                        extend: "pdf",
-                        title: "ExampleFile"
-                    },
+                buttons: [ /* Your button configurations */ ],
+            });
 
-                    {
-                        extend: "print",
-                        customize: function(win) {
-                            $(win.document.body).addClass("white-bg");
-                            $(win.document.body).css("font-size", "10px");
+            loadProductData();
 
-                            $(win.document.body)
-                                .find("table")
-                                .addClass("compact")
-                                .css("font-size", "inherit");
-                        },
-                    },
-                ],
+            $('#productTable').on('click', '.btn-edit', function(e) {
+                e.preventDefault();
+                const productId = $(this).data('id');
+                window.location.href = `/product/edit/${productId}`;
+            });
+
+            $('#productTable').on('click', '.btn-delete', function(e) {
+                e.preventDefault();
+                const productId = $(this).data('id');
+
+                if (confirm('Are you sure you want to delete this product?')) {
+                    deleteProduct(productId);
+                }
             });
         });
+
+        function loadProductData() {
+            $.ajax({
+                url: '{{ route('product.get') }}',
+                type: 'GET',
+                dataType: 'json',
+                success: function(response) {
+                    const tableBody = $('#productTable tbody');
+                    tableBody.empty();
+
+                    if (response.data && response.data.length > 0) {
+                        response.data.forEach((product, index) => {
+                            const row = `
+                    <tr>
+                        <td>${product.id}</td>
+                        <td>${product.prod_name}</td>
+                        <td>${product.price}</td>
+                        <td>${product.category}</td>
+                        <td>${product.is_popular ? 'Yes' : 'No'}</td>
+                        <td>${product.status}</td>
+                        <td>
+                            <a href="#" class="btn btn-sm btn-primary btn-edit" data-id="${product.id}">Edit</a>
+                            <a href="#" class="btn btn-sm btn-danger btn-delete" data-id="${product.id}">Delete</a>
+                        </td>
+                    </tr>
+                `;
+                            tableBody.append(row);
+                        });
+                    } else {
+                        tableBody.append('<tr><td colspan="8" class="text-center">No data available</td></tr>');
+                    }
+                },
+                error: function(xhr, status, error) {
+                    console.error('Error loading product data:', error);
+                }
+            });
+        }
+
+        function deleteProduct(productId) {
+            $.ajax({
+                url: '{{ route('product.delete') }}',
+                type: 'POST',
+                data: {
+                    id: productId,
+                    _token: '{{ csrf_token() }}', // CSRF token for security
+                },
+                success: function(response) {
+                    if (response.success) {
+                        alert(response.message);
+                        loadProductData(); // Refresh the table data
+                    } else {
+                        alert(response.message);
+                    }
+                },
+                error: function(xhr, status, error) {
+                    console.error('Error deleting product:', error);
+                    alert('Failed to delete the product. Please try again.');
+                }
+            });
+        }
     </script>
+
 
     <!-- DataTables Bootstrap Integration -->
     <script src="https://cdn.datatables.net/1.13.6/js/dataTables.bootstrap4.min.js"></script>
