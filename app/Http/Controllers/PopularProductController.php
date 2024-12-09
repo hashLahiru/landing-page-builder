@@ -3,10 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
-use App\Models\ProductModel;
+use App\Models\PopularProductModel;
 use Illuminate\Http\Request;
 
-class HomeProductCategoriesController extends Controller
+class PopularProductController extends Controller
 {
     public function index()
     {
@@ -16,6 +16,6 @@ class HomeProductCategoriesController extends Controller
             abort(500, 'Popular Product Data not found in the database.');
         }
 
-        return view('home', compact('PopularProductData'));
+        return view('spice-web-template.pages.home', compact('PopularProductData'));
     }
 }

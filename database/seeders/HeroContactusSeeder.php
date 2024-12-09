@@ -20,9 +20,8 @@ class HeroContactusSeeder extends Seeder
 
         $fields = [
           
-                    
-            'HC_img_url' ,
-            'HC_title' ,
+            'HC_mainimg_url' ,
+            'HC_maintitle',
              
         
         ];
@@ -49,8 +48,8 @@ class HeroContactusSeeder extends Seeder
         $sampleValues = [
                 
              
-            'HC_img_url' =>['SpiceWebTemplate/cdn/shop/files/slide-2_2048x1214_crop_top7279.jpg?v=1614350745'],
-            'HC_title' =>['Contact Us'],
+            'HC_mainimg_url' =>['SpiceWebTemplate/cdn/shop/files/slide-2_2048x1214_crop_top7279.jpg?v=1614350745'],
+            'HC_maintitle' =>['Contact Us'],
            
 
                        

@@ -29,10 +29,10 @@
             <div class="top_pannel">
                 <div class="container">
                     <div class="top_pannel_text">
-                        Order online or call us (1800) 000 8808
+                        {{ $SpiceNavbarData->SN_text1 ?? null }}
                     </div>
 
-                    <div class="top_pannel_menu">
+                    {{-- <div class="top_pannel_menu">
                         <div class="header_search">
                             <span class="search_toggle"><i class="fa fa-search" aria-hidden="true"></i><i
                                     class="fa fa-times"></i></span>
@@ -79,7 +79,7 @@
                                     </li>
                                 </ul>
                             </div>
-                        </div>
+                        </div> 
 
                         <script>
                             theme.shopCurrency = "USD";
@@ -89,15 +89,15 @@
 
                         <script src="{{ asset('SpiceWebTemplate/cdn.shopify.com/s/javascripts/currencies.js') }}" defer></script>
                         <script src="{{ asset('SpiceWebTemplate/cdn/shop/t/2/assets/currency-toolsaa48.js') }}" defer></script>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
 
             <div class="header_wrap1">
                 <div class="container header_main_wrap">
                     <div class="header_wrap2 header_left">
-                        <a class="header_logo" href="index.html">
-                            <img src="{{ asset('SpiceWebTemplate/cdn/shop/files/logo_5faca918-a849-4860-a888-0f9eef45496d_170x70_crop_center%402xbd99.png') }}"
+                        <a class="header_logo" href="{{ $SpiceNavbarData->SN_logo_url ?? null }}">
+                            <img src="{{ asset($SpiceNavbarData->SN_logo ?? '') }}"
                                 alt="theme848-spices-store" style="max-width: 170px" />
                         </a>
                     </div>
@@ -105,7 +105,7 @@
                     <div class="header_wrap2 header_center">
                         <nav id="megamenu" class="megamenu">
                             <h2 id="megamenu_mobile_toggle">
-                                <i class="fa fa-bars" aria-hidden="true"></i>Menu
+                                <i class="{{ $SpiceNavbarData->SN_icon ?? null }}" aria-hidden="true"></i>{{ $SpiceNavbartData->SN_icon_text ?? null }}
                             </h2>
 
                             <div id="megamenu_mobile_close">
@@ -115,21 +115,21 @@
                             <ul id="megamenu_level__1" class="level_1">
                                 <li class="level_1__item level_2__small">
                                     <a class="level_1__link"
-                                        href="https://theme764-lingerie-store.myshopify.com/">Home
-                                        <i class="level_1__trigger megamenu_trigger"
+                                        href="{{ $SpiceNavbarData->SN_icon1_url ?? null }}">{{ $SpiceNavbarData->SN_icon1_text ?? null }}
+                                        <i class="{{ $SpiceNavbarData->SN_icon1 ?? null }}"
                                             data-submenu="menu_1524227640085"></i>
                                     </a>
                                 </li>
 
                                 <li class="level_1__item level_2__links">
-                                    <a class="level_1__link" href="collections.html">Collection
-                                        <i class="level_1__trigger megamenu_trigger"
+                                    <a class="level_1__link" href="{{ $SpiceNavbarData->SN_icon2_url ?? null }}">{{ $SpiceNavbarData->SN_icon2_text ?? null }}
+                                        <i class="{{ $SpiceNavbarData->SN_icon2 ?? null }}"
                                             data-submenu="menu_1525679653045"></i>
                                     </a>
                                 </li>
 
                                 <li class="level_1__item">
-                                    <a class="level_1__link" href="pages/contact-us.html">Contact Us
+                                    <a class="level_1__link" href="{{ $SpiceNavbarData->SN_icon3_url ?? null }}">{{ $SpiceNavbarData->SN_icon3_text ?? null }}
                                     </a>
                                 </li>
                             </ul>
@@ -138,9 +138,8 @@
 
                     <div class="header_wrap2 header_right">
                         <div class="header_cart" id="main__cart_item">
-                            <a class="cart_link" href="cart.html"><i class="fa fa-shopping-cart"
-                                    aria-hidden="true"></i> 0
-                                item(s)</a>
+                            <a class="cart_link" href="{{ $SpiceNavbarData->SN_cart_url ?? null }}"><i class="{{ $SpiceNavbarData->SN_cart_icon ?? null }}"
+                                    aria-hidden="true"></i> {{ $SpiceNavbarData->SN_cart_text ?? null }}</a>
 
                             <script>
                                 theme.cartAjaxOn = true;
@@ -156,7 +155,7 @@
                                 </div>
                                 <div id="cart_content_box">
                                     <p class="alert alert-warning">
-                                        It appears that your cart is currently empty
+                                        {{ $SpiceNavbarData->SN_textA ?? null }}
                                     </p>
                                 </div>
                             </div>

@@ -30,13 +30,13 @@
           <div class="row">
             <div class="col-sm-4">
               <div class="contact_item item_address">
-                <h3 class="item_title">contacts</h3>
+                <h3 class="item_title">{{ $SpiceContactusData->Con_title1 ?? null }}</h3>
 
                 <div class="contact_address contact_element">
                   <svg
                     version="1.1"
-                    xmlns="http://www.w3.org/2000/svg"
-                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xmlns="{{ $SpiceContactusData->Con_urlA1 ?? null }}"
+                    xmlns:xlink="{{ $SpiceContactusData->Con_urlB1 ?? null }}"
                     width="36"
                     height="36"
                     viewBox="0 0 20 20"
@@ -46,15 +46,15 @@
                     ></path>
                   </svg>
 
-                  <h4>Address</h4>
-                  <p>7563 St. Vicent Place, Glasgow</p>
+                  <h4>{{ $SpiceContactusData->Con_detail1 ?? null }}</h4>
+                  <p>{{ $SpiceContactusData->Con_text1 ?? null }}</p>
                 </div>
 
                 <div class="contact_phone contact_element">
                   <svg
                     version="1.1"
-                    xmlns="http://www.w3.org/2000/svg"
-                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xmlns="{{ $SpiceContactusData->Con_urlA2 ?? null }}"
+                    xmlns:xlink="{{ $SpiceContactusData->Con_urlB2 ?? null }}"
                     width="36"
                     height="36"
                     viewBox="0 0 20 20"
@@ -73,15 +73,15 @@
                     ></path>
                   </svg>
 
-                  <h4>Phone</h4>
-                  <a href="tel:+09123456789">+09123 456 789</a>
+                  <h4>{{ $SpiceContactusData->Con_detail2 ?? null }}</h4>
+                  <a href="{{ $SpiceContactusData->Con_text2 ?? null }}">{{ $SpiceContactusData->Con_text2_url ?? null }}</a>
                 </div>
 
                 <div class="contact_hours contact_element">
                   <svg
                     version="1.1"
-                    xmlns="http://www.w3.org/2000/svg"
-                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xmlns="{{ $SpiceContactusData->Con_urlA3 ?? null }}"
+                    xmlns:xlink="{{ $SpiceContactusData->Con_urlB3 ?? null }}"
                     width="36"
                     height="36"
                     viewBox="0 0 20 20"
@@ -94,15 +94,15 @@
                     ></path>
                   </svg>
 
-                  <h4>Hours</h4>
-                  <p>7 Days a week from 10:00 am to 6:00 pmt</p>
+                  <h4>{{ $SpiceContactusData->Con_detail3 ?? null }}</h4>
+                  <p>{{ $SpiceContactusData->Con_text3 ?? null }}</p>
                 </div>
 
                 <div class="contact_email contact_element">
                   <svg
                     version="1.1"
-                    xmlns="http://www.w3.org/2000/svg"
-                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xmlns="{{ $SpiceContactusData->Con_urlA3 ?? null }}"
+                    xmlns:xlink="{{ $SpiceContactusData->Con_urlB3 ?? null }}"
                     width="36"
                     height="36"
                     viewBox="0 0 20 20"
@@ -115,9 +115,9 @@
                     ></path>
                   </svg>
 
-                  <h4>Email</h4>
-                  <a href="mailto:zemes@demolink.org"
-                    >zemes@demolink.org</a
+                  <h4>{{ $SpiceContactusData->Con_detail4 ?? null }}</h4>
+                  <a href="{{ $SpiceContactusData->Con_text4_url ?? null }}"
+                    >{{ $SpiceContactusData->Con_text4 ?? null }}</a
                   >
                   <p></p>
                 </div>
@@ -126,7 +126,7 @@
 
             <div class="col-sm-4">
               <div class="contact_item item_form">
-                <h3 class="item_title">get in touch with us</h3>
+                <h3 class="item_title">{{ $SpiceContactusData->Con_title2 ?? null }}</h3>
 
                 <form
                   method="post"
@@ -181,35 +181,35 @@
 
             <div class="col-sm-4">
               <div class="contact_item item_follow">
-                <h3 class="item_title">follow us</h3>
+                <h3 class="item_title">{{ $SpiceContactusData->Con_title3 ?? null }}</h3>
 
                 <ul class="social_wrap">
                   <li>
-                    <a href="https://www.facebook.com/zmzcommerce/"
-                      ><i class="fa fa-facebook" aria-hidden="true"></i>
-                      <h4>follow us on Facebook</h4></a
+                    <a href="{{ $SpiceContactusData->Con_textA_url ?? null }}"
+                      ><i class="{{ $SpiceContactusData->Con_textA_icon ?? null }}" aria-hidden="true"></i>
+                      <h4>{{ $SpiceContactusData->Con_textA ?? null }}</h4></a
                     >
                   </li>
 
                   <li>
-                    <a href="https://twitter.com/zemezlab"
-                      ><i class="fa fa-twitter" aria-hidden="true"></i>
-                      <h4>Join us on twitter</h4></a
+                    <a href="{{ $SpiceContactusData->Con_textB_url ?? null }}"
+                      ><i class="{{ $SpiceContactusData->Con_textB_icon ?? null }}" aria-hidden="true"></i>
+                      <h4>{{ $SpiceContactusData->Con_textB ?? null }}</h4></a
                     >
                   </li>
 
                   <li>
-                    <a href="https://www.instagram.com/zemezlab"
-                      ><i class="fa fa-instagram" aria-hidden="true"></i>
-                      <h4>follow us on instagram</h4></a
+                    <a href="{{ $SpiceContactusData->Con_textc_url ?? null }}"
+                      ><i class="{{ $SpiceContactusData->Con_textc_icon ?? null }}" aria-hidden="true"></i>
+                      <h4>{{ $SpiceContactusData->Con_textc ?? null }}</h4></a
                     >
                   </li>
 
                   <li>
                     <a
-                      href="https://www.youtube.com/channel/UCPW43un8VFXHe9LxKpR_2Hg"
-                      ><i class="fa fa-youtube" aria-hidden="true"></i>
-                      <h4>subscribe us on youtube</h4></a
+                      href="{{ $SpiceContactusData->Con_textD_url ?? null }}"
+                      ><i class="{{ $SpiceContactusData->Con_textD_icon ?? null }}" aria-hidden="true"></i>
+                      <h4>{{ $SpiceContactusData->Con_textD ?? null }}</h4></a
                     >
                   </li>
                 </ul>

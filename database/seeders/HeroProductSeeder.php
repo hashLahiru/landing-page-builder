@@ -50,7 +50,7 @@ class HeroProductSeeder extends Seeder
                 
              
 
-            'HP_img_url' =>['SSpiceWebTemplate/cdn/shop/files/banner-1_1024x565_crop_centerb695.jpg'],
+            'HP_img_url' =>['SpiceWebTemplate/cdn/shop/files/banner-1_1024x565_crop_centerb695.jpg'],
             'HP_title' =>['Products'],
 
                        

@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
-use App\Models\ProductModel;
+use App\Models\HeroHomeModel;
 use Illuminate\Http\Request;
 
 class HeroHomeController extends Controller
@@ -16,6 +16,6 @@ class HeroHomeController extends Controller
             abort(500, 'Hero Home data not found in the database.');
         }
 
-        return view('home', compact('HeroHomeData'));
+        return view('spice-web-template.pages.home', compact('HeroHomeData'));
     }
 }

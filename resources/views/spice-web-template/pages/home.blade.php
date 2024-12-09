@@ -21,12 +21,26 @@
 @include('spice-web-template.Components.Product.PopularProduct') 
 @include('spice-web-template.Components.Features.BlogPost')
 @include('spice-web-template.Components.PageLayout.Footer') --}}
+{{-- @include('spice-web-template.Components.Hero.HeroContactus')  --}}
 
 
-
-@include('spice-web-template.Components.Hero.HeroHome', ['HeroHomeData' => $HeroHomeData])
+@include('spice-web-template.Components.PageLayout.Navbar', ['SpiceNavbarData' => $SpiceNavbarData]) 
+@include('spice-web-template.Components.Hero.HeroHome', ['HeroHomeData' => $HeroHomeData]) 
 @include('spice-web-template.Components.Product.HomeProductCategories', ['HomeProductCategoriesData' => $HomeProductCategoriesData])
 @include('spice-web-template.Components.Product.PopularProduct', ['PopularProductData' => $PopularProductData])
 @include('spice-web-template.Components.Features.BlogPost', ['BlogPostData' => $BlogPostData])
+@include('spice-web-template.Components.PageLayout.Footer', ['SpiceFooterData' => $SpiceFooterData]) 
+
+
+
+
+{{-- @include('spice-web-template.Components.Hero.HeroProducts', ['HeroProductData' => $HeroProductData])   --}}
+{{-- @include('spice-web-template.Components.Hero.HeroContactus', ['HeroContactusData' => $HeroContactusData])  --}}
+
+
+
+{{-- @include('spice-web-template.Components.CTA.Contactus', ['SpiceContactusData' => $SpiceContactusData])  --}}
+
+
 @endsection 
 
