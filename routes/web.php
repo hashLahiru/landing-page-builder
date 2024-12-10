@@ -174,8 +174,14 @@ Route::get('/spice-products', function () {
     return view('spice-web-template.pages.products');
 });
 
+
 Route::get('/spice-contactus', function () {
     return view('spice-web-template.pages.contactUs');
+});
+
+
+Route::get('/spice-details', function () {
+    return view('spice-web-template.pages.details');
 });
 
 // Profile Management Routes
