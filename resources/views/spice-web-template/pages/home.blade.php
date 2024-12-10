@@ -24,6 +24,10 @@
 {{-- @include('spice-web-template.Components.Hero.HeroContactus')  --}}
 
 
+{{-- @include('spice-web-template.Components.Product.ProductDescription') --}}
+
+
+
 @include('spice-web-template.Components.PageLayout.Navbar', ['SpiceNavbarData' => $SpiceNavbarData]) 
 @include('spice-web-template.Components.Hero.HeroHome', ['HeroHomeData' => $HeroHomeData]) 
 @include('spice-web-template.Components.Product.HomeProductCategories', ['HomeProductCategoriesData' => $HomeProductCategoriesData])

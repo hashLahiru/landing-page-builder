@@ -170,13 +170,51 @@ Route::get('/spice-contactus', function () {
 });
 
 
+
+
+// spice product details Page Route
+Route::get('/spice-details', function () {
+    $components = [
+        'SpiceNavbar',
+        'SpiceFooter',
+        
+
+    ];
+
+    $data = [];
+    foreach ($components as $componentName) {
+        $component = Component::where('name', $componentName)->first();
+        if ($component) {
+            $fields = ComponentField::where('component_id', $component->id)
+                ->with('values')
+                ->get();
+            $componentData = [];
+            foreach ($fields as $field) {
+                $componentData[$field->field_name] = $field->values->pluck('value')->first();
+            }
+            $data[$componentName . 'Data'] = (object) $componentData;
+        }
+    }
+
+    return view('spice-web-template.pages.details', $data);
+});
+
+
+
+
 Route::get('/spice-products', function () {
     return view('spice-web-template.pages.products');
 });
 
+
 Route::get('/spice-contactus', function () {
     return view('spice-web-template.pages.contactUs');
 });
+
+
+// Route::get('/spice-details', function () {
+//     return view('spice-web-template.pages.details');
+// });
 
 // Profile Management Routes
 Route::middleware('auth')->group(function () {
