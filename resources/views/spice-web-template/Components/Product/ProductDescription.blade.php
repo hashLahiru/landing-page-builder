@@ -180,10 +180,36 @@
 					a[target="_blank"] {
    				 padding-top: 10px; 
         		 padding-left: 5px; 
-   
-
   }
   			
+
+  				.mainswiper{
+				width: 150%;
+				margin-top: 10px
+			}
+
+			swiper-slide {
+		  text-align: center;
+		  font-size: 18px;
+		  background: #fff;
+		  display: flex;
+		  justify-content: center;
+		  align-items: center;
+		
+		}
+
+
+		.mySwiper2 {
+
+			justify-content: center;
+			align-items: center;
+		  margin-left:100;
+		}
+
+		.single_product__info{
+			margin-top: 35px;
+		}
+
 
 
 				  </style>
@@ -223,74 +249,13 @@
 			<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<![endif]-->
 
-		<style>
-			html,
-			body {overflow-x: hidden;}
-			.row {overflow: hidden;}
-		
-
-			.mainswiper{
-				width: 150%;
-				margin-top: 10px
-			}
-
-			swiper-slide {
-		  text-align: center;
-		  font-size: 18px;
-		  background: #fff;
-		  display: flex;
-		  justify-content: center;
-		  align-items: center;
-		
-		}
-
-
-		.mySwiper2 {
-
-			justify-content: center;
-			align-items: center;
-		  margin-left:100;
-		}
-
-		.single_product__info{
-			margin-top: 25px;
-		}
-
-
-		</style>
-
-
-
-
 
 </head>
 
 	<body class="template-product scheme_1">
-		{{-- <div class="page_wrapper">
-
-			<div id="page_preloader__bg">
-				<img id="page_preloader__img" src="../cdn/shop/t/2/assets/shopify_logo0294.gif?v=124153987796372640561587542594" alt="">
-			</div> --}}
-
-			{{-- <script>
-				preloaderBg = document.getElementById('page_preloader__bg');
-				preloaderImg = document.getElementById('page_preloader__img');
-
-				window.addEventListener('load', function() {
-					preloaderBg.classList.add("off");
-					preloaderImg.classList.add("off");
-				});
-
-			</script> --}}
-
-			
-
 
 				<div class="page_container">
-					
-		
-
-					
+										
 					
 <div class="main_content ">
 	<div id="shopify-section-template-product" class="shopify-section section section_single-product section_product section_template__product">
@@ -306,47 +271,7 @@
 		
 <div class="single_product__img col-sm-6">
 					
-							{{-- <div id="gallery_thumbs-template-product" class="gallery_thumbs gallery_thumbs__ swiper-container">
-								<div class="swiper-wrapper">
-									
-										<div class="swiper-slide">
-											<img src="{{asset('/SpiceWebTemplate/cdn/shop/products/sichuan-pepper-sea-salt_01_255x320_crop_topce2f.png')}}" alt="">
-										</div>
-									
-										<div class="swiper-slide">
-											<img src="{{asset('/SpiceWebTemplate/cdn/shop/products/sichuan-pepper-sea-salt_02_170x163_crop_topce2f.png')}}" alt="">
-										</div>
-									
-										<div class="swiper-slide">
-											<img src="{{asset('/SpiceWebTemplate/cdn/shop/products/sichuan-pepper-sea-salt_03_470x509_crop_topce2f.png')}}" alt="">
-										</div>
-									
-								</div>
-							</div>
-
-							<div id="gallery_big-template-product" class="gallery_big swiper-container">
-								<div class="swiper-wrapper">
-									<div class="swiper-slide">
-										<img id="primary_img_template-product" src="{{asset('/SpiceWebTemplate/cdn/shop/products/sichuan-pepper-sea-salt_03_470x509_crop_topce2f.png')}}"Schani Moong Split Chilka">
-									</div>
-
-									
-										<div class="swiper-slide">
-											<img src="{{asset('/SpiceWebTemplate/cdn/shop/products/sichuan-pepper-sea-salt_01_255x320_crop_topce2f.png')}}" alt="">
-										</div>
-									
-										<div class="swiper-slide">
-											<img src="{{asset('/SpiceWebTemplate/cdn/shop/products/sichuan-pepper-sea-salt_02_170x163_crop_topce2f.png')}}" alt="">
-										</div>
-									
-								</div>
-							</div>
-
-							<div id="prev_template-product" class="swiper_btn swiper_btn__prev"></div>
-							<div id="next_template-product" class="swiper_btn swiper_btn__next"></div>
-					 --}}
-
-
+			
 					 <div class="mainswiper"> 
 						<swiper-container style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="mySwiper"
 						thumbs-swiper=".mySwiper2" loop="true" space-between="10" navigation="true">
@@ -397,6 +322,14 @@
 			<form action="https://theme848-spices-store.myshopify.com/cart/add" method="post" enctype="multipart/form-data" data-section="template-product">
 				
 				<div class="details_wrapper">
+				
+					<p class="single_product__availability">
+						Description:
+
+						<span id="single_product__availability-template-product">Enjoy shopping in our store! Need help? You can address our 24/7 online support system. There you can find all answers concerning our goods, terms and prices. So don`t waste your time on hesitation and make your purchase in our store. We bring positive emotions and elegant taste into your dishes. Remember that you can get a good benefit in our store.</span>
+					</p>
+
+				
 					<p class="single_product__availability">
 						Availability:
 
@@ -559,34 +492,6 @@
 
 
 </div>
-
-
-<div class="tab_content_wrapper">
-	<div class="tab_navigation">
-		<span class="tab_nav tab_nav_1 active" data-tab="0">Description</span>
-			
-<span class="tab_nav tab_nav_2" data-tab="1">Delivery</span>				
-	</div>
-
-	<div class="tab_content">
-
-	<div class="tab_item tab_item_1 active">
-			<div itemprop="description" class="product_description rte">
-				<div><p>Enjoy shopping in our store! Need help? You can address our 24/7 online support system. There you can find all answers concerning our goods, terms and prices. So don`t waste your time on hesitation and make your purchase in our store. We bring positive emotions and elegant taste into your dishes. Remember that you can get a good benefit in our store.</p></div>
-			</div>
-		</div>
-
-	</br>
-			
-<div class="rte tab_item tab_item_2"></div>
-
-				
-		
-	</div>
-</div>
-
-
-
 
 <script>
 	var producText = {
