@@ -51,8 +51,6 @@ class AdminProductController extends Controller
         return response()->json(['success' => 'Product added successfully!']);
     }
 
-
-
     public function getProducts()
     {
         $products = Product::with('category')
@@ -64,6 +62,7 @@ class AdminProductController extends Controller
                 'id' => $index + 1,
                 'prod_name' => $product->prod_name,
                 'price' => $product->price,
+                'category_id' => $product->category ? $product->category->id,
                 'category' => $product->category ? $product->category->cat_name : 'N/A',
                 'is_popular' => $product->is_popular ? 'Yes' : 'No',
                 'status' => $product->status ?? 'N/A',
@@ -161,7 +160,6 @@ class AdminProductController extends Controller
         $product->save();
 
         return redirect()->route('products.view')->with('success', 'Product updated successfully.');
-        // return response()->json(['success' => 'Product updated successfully.']);
     }
 
     private function uploadImage($image)

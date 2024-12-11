@@ -3,14 +3,34 @@
 @section('title', 'Home Page')
 
 @section('content-spice')
+    @include('spice-web-template.Components.PageLayout.Navbar', ['SpiceNavbarData' => $SpiceNavbarData])
+    {{-- @include('spice-web-template.Components.Hero.HeroProducts', ['HeroProductData' => $HeroProductData])  --}}
+    <div class="main_content">
+        <!-- BEGIN content_for_index -->
+        <div id="shopify-section-1563274168890" class="shopify-section index-section">
+            <div class="section section_homepage section_slideshow_full_width section_slideshow__large swiper-container"
+                id="slideshow_1563274168890" data-autoplay="false" data-speed="5000">
+                <div class="swiper-wrapper">
 
-{{-- @include('spice-web-template.Components.PageLayout.Navbar')
-@include('spice-web-template.Components.Hero.HeroProducts')
-@include('spice-web-template.Components.Product.ProductCategories')
-@include('spice-web-template.Components.Product.ProductList')
-@include('spice-web-template.Components.PageLayout.Footer') --}}
+                    <div class="swiper-slide image_slide">
+                        <div class="img_placeholder__wrap img_placeholder__large"
+                            style="
+                                   background-image: url('{{ asset('/SpiceWebTemplate/cdn/shop/files/slide-2_2048x1214_crop_top7279.jpg') }}');">
+                        </div>
+                        <div class="slide_caption position_center">
+                            <div class="container">
+                                <div class="caption_text">
+                                    <h2>{{ $HeroProductData->HP_title ?? null }}</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-@include('spice-web-template.Components.PageLayout.Navbar', ['SpiceNavbarData' => $SpiceNavbarData]) 
-@include('spice-web-template.Components.Hero.HeroProducts', ['HeroProductData' => $HeroProductData]) 
-@include('spice-web-template.Components.PageLayout.Footer', ['SpiceFooterData' => $SpiceFooterData]) 
-@endsection 
+        @include('spice-web-template.Components.Product.ProductCategories')
+        {{-- @include('spice-web-template.Components.Product.ProductList') --}}
+        @include('spice-web-template.Components.PageLayout.Footer', [
+            'SpiceFooterData' => $SpiceFooterData,
+        ])

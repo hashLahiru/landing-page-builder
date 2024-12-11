@@ -1,4 +1,4 @@
-@extends('spice-web-template.layouts.app')            {{-- Nithya Jayasooriya 2024/12/4 --}}
+@extends('spice-web-template.layouts.app') {{-- Nithya Jayasooriya 2024/12/4 --}}
 
 @section('title', 'Home Page')
 
@@ -29,12 +29,11 @@
                     <div class="section section_homepage section_slideshow_full_width section_slideshow__large swiper-container"
                         id="slideshow_1563274168890" data-autoplay="false" data-speed="5000">
                         <div class="swiper-wrapper">
-   
+
                             <div class="swiper-slide image_slide">
                                 <div class="img_placeholder__wrap img_placeholder__large"
                                     style="
-                                   background-image: url('{{ asset($HeroProductData->HP_img_url ?? '') }}');"
-                      >  
+                                   background-image: url('{{ asset($HeroProductData->HP_img_url ?? '') }}');">
                                 </div>
 
                                 <div class="slide_caption position_center">

@@ -1,15 +1,19 @@
 <?php
 
+use App\Models\Component;
+use App\Models\ComponentField;
+use App\Models\ProductCategory;
+use App\Models\Product;
+
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\LandingPageController;
 use App\Http\Controllers\ImageController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
-use App\Models\Component;
-use App\Models\ComponentField;
 use App\Http\Controllers\AuthenticatedSessionController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\AdminProductController;
+use Laravel\Pail\ValueObjects\Origin\Console;
 
 // Landing Page Route
 Route::get('/', function () {
@@ -72,13 +76,9 @@ Route::get('/spice-home', function () {
         'PopularProduct',
         'BlogPost',
         'SpiceFooter',
-        
-
         //'HeroProduct',
         //'HeroContactUs',
         //'SpiceContactus',
-     
-
     ];
 
     $data = [];
@@ -95,29 +95,51 @@ Route::get('/spice-home', function () {
             $data[$componentName . 'Data'] = (object) $componentData;
         }
     }
+
+    $popularProducts = Product::where('is_popular', 1)->where('status', 'active')
+        ->inRandomOrder()
+        ->limit(3)
+        ->get();
+
+    $data['PopularProductData'] = $popularProducts;
 
     return view('spice-web-template.pages.home', $data);
 });
 
-
-
-
-// spice products  Page Route
 Route::get('/spice-products', function () {
-    $components = [
-        'SpiceNavbar',
-        'HeroProduct',
-        'SpiceFooter',
-        
+    // Fetch categories and product counts
+    $categories = DB::table('product_categories')
+        ->leftJoin('products', 'product_categories.id', '=', 'products.category_id')
+        ->select(
+            'product_categories.id',
+            'product_categories.cat_image',
+            'product_categories.cat_name as name',
+            DB::raw('COUNT(products.id) as product_count')
+        )
+        ->whereNotNull('product_categories.cat_name')
+        ->whereNotNull('product_categories.cat_image')
+        ->groupBy('product_categories.id', 'product_categories.cat_image', 'product_categories.cat_name')
+        ->get();
 
-     
-        //'HeroContactUs',
-        //'SpiceContactus',,
-        
-     
+    $products = DB::table('products')
+        ->leftJoin('product_categories', 'products.category_id', '=', 'product_categories.id')
+        ->select(
+            'products.id',
+            'products.prod_name',
+            'products.description',
+            'products.price',
+            'products.category_id',
+            'products.discount',
+            'products.img1_url',
+            'products.img2_url',
+            'products.img3_url'
+        )
+        ->get();
 
-    ];
+    // Define the components as before
+    $components = ['SpiceNavbar', 'HeroProduct', 'SpiceFooter'];
 
+    // Fetch component data
     $data = [];
     foreach ($components as $componentName) {
         $component = Component::where('name', $componentName)->first();
@@ -125,30 +147,33 @@ Route::get('/spice-products', function () {
             $fields = ComponentField::where('component_id', $component->id)
                 ->with('values')
                 ->get();
+
             $componentData = [];
             foreach ($fields as $field) {
-                $componentData[$field->field_name] = $field->values->pluck('value')->first();
+                $componentData[$field->field_name] = $field->values->pluck('value')->first() ?? '';
             }
-            $data[$componentName . 'Data'] = (object) $componentData;
+            $data[$componentName . 'Data'] = (object)$componentData;
         }
     }
+
+    // Add products and categories to the response
+    $data['products'] = $products;
+    $data['categories'] = $categories;
 
     return view('spice-web-template.pages.products', $data);
 });
 
-
-
-
+Route::get('/product-description', function () {
+    return view('spice-web-template.pages.productDescription');
+});
 
 // spice contact us   Page Route
 Route::get('/spice-contactus', function () {
     $components = [
         'SpiceNavbar',
-       // 'HeroContactUs',
+        // 'HeroContactUs',
         'SpiceContactus',
         'SpiceFooter',
-        
-
     ];
 
     $data = [];
@@ -169,14 +194,6 @@ Route::get('/spice-contactus', function () {
     return view('spice-web-template.pages.contactUs', $data);
 });
 
-
-Route::get('/spice-products', function () {
-    return view('spice-web-template.pages.products');
-});
-
-Route::get('/spice-contactus', function () {
-    return view('spice-web-template.pages.contactUs');
-});
 
 // Profile Management Routes
 Route::middleware('auth')->group(function () {
@@ -209,10 +226,6 @@ Route::middleware('auth')->group(function () {
         return view('admin.products');
     })->name('products.view');
 
-    // Route::get('/admin-products', function () {
-    //     return view('admin.product-form');
-    // });
-
     Route::get('/admin/products', [AdminProductController::class, 'getProducts'])->name('product.get');
     Route::get('/product/create', [AdminProductController::class, 'create'])->name('product.create');
     Route::post('/products', [AdminProductController::class, 'store'])->name('product.store');
@@ -237,7 +250,6 @@ Route::get('/get-component-fields/{componentId}', function ($componentId) {
                 'value' => $field->values->first()->value ?? '',
             ];
         });
-
         return response()->json(['fields' => $fields]);
     }
 

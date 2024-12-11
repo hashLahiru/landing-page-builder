@@ -62,11 +62,11 @@
 
     @include('components.feedbacks.feedback-3', ['feedback3Data' => $feedback3Data])
 
-@include('components.about-us', ['aboutData' => $aboutData]) 
+    @include('components.about-us', ['aboutData' => $aboutData])
 
 
 
-{{-- @include('components.layout.footer', ['footerData' => $footerData]) --}}
+    {{-- @include('components.layout.footer', ['footerData' => $footerData]) --}}
 
 
 

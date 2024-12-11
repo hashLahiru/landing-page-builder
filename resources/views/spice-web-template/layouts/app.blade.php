@@ -11,6 +11,9 @@
       href="{{ asset('SpiceWebTemplate/cdn/shop/files/ICON_32x3214b0.png?v=1614350749')}}  "
       type="image/png"
     />
+    
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1, maximum-scale=1"
@@ -875,18 +878,54 @@
     z-index: 1000;
 }
 
-#floating-whatsapp a img {
-    width: 50px;
-    height: 50px;
+#whatsapp_button {
+    position: fixed;
+    bottom: 20px; /* Distance from the bottom of the screen */
+    right: 20px;  /* Distance from the right side of the screen */
+    background-color: #25d366; /* WhatsApp green color */
+    color: white;
+    padding: 15px;
     border-radius: 50%;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-size: 30px;
+    z-index: 9999;
+    transition: background-color 0.3s ease;
 }
 
-#floating-whatsapp a img:hover {
-    transform: scale(1.1);
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+#whatsapp_button:hover {
+    background-color: #128c7e; /* Darker WhatsApp color on hover */
 }
+
+#whatsapp_button i {
+    margin: 0;
+}
+
+.product_options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.product_options__search input {
+    width: 60%;
+    padding: 10px;
+    font-size: 14px;
+}
+
+.product_options__all button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+}
+
+.product_options__all button:hover {
+    background-color: #555;
+}
+
 
     </style>
     <link href="https://monorail-edge.shopifysvc.com/" rel="dns-prefetch" />
@@ -1346,6 +1385,7 @@
         moneyFormat: "${{!! '{' !!}amount{!! '}' !!}",
     };
 </script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
 
     <script
